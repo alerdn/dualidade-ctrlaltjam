@@ -104,8 +104,8 @@ MonoBehaviour:
   - {fileID: 6180897373430473887}
   - {fileID: 6180897373710826610}
   m_Bounds:
-    m_Center: {x: -0.00000008940697, y: -0.00035011768, z: 0}
-    m_Extent: {x: 0.29999992, y: 1.01172, z: 0}
+    m_Center: {x: 0.00000014901161, y: -0.00035011768, z: 0}
+    m_Extent: {x: 0.30000016, y: 1.01172, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -308,8 +308,8 @@ MonoBehaviour:
   - {fileID: 6180897372594912309}
   - {fileID: 6180897372713936908}
   m_Bounds:
-    m_Center: {x: 0.00000014901161, y: -0.00035011768, z: 0}
-    m_Extent: {x: 0.30000004, y: 1.01172, z: 0}
+    m_Center: {x: -0.00000008940697, y: -0.00035011768, z: 0}
+    m_Extent: {x: 0.29999992, y: 1.01172, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -354,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6180897373076563523}
   - component: {fileID: 6180897373076563522}
+  - component: {fileID: 5051278325984546901}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -388,7 +389,7 @@ Animator:
   m_GameObject: {fileID: 6180897373076563533}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d356dafca8a52d448fe09f3d957ada1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 25717a55a0278ff489c269084cab4489, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -398,6 +399,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5051278325984546901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180897373076563533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea046ce39e44f34baf55ad131a1c6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseWalkDuration: 3
+  _rotationDuration: 0.35
+  _pathTransforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  _movementSpeed: 2
+  _runSpeed: 2
 --- !u!1 &6180897373430473886
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,8 +715,8 @@ MonoBehaviour:
   - {fileID: 6180897374125319594}
   - {fileID: 6180897373825313878}
   m_Bounds:
-    m_Center: {x: 0.000000059604645, y: -0.00000023841858, z: 0}
-    m_Extent: {x: 0.7, y: 1.7400002, z: 0}
+    m_Center: {x: 0, y: -0.00000023841858, z: 0}
+    m_Extent: {x: 0.70000017, y: 1.7400002, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0

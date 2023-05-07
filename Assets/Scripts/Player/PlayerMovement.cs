@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
         {
             _currentSpeed = _runSpeed;
         }
+        else if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            _animator.SetTrigger("Crouch");
+        }
 
         float directionalSpeed = Input.GetAxis("Horizontal") * _currentSpeed;
         _movementDirection = directionalSpeed * Vector2.right;

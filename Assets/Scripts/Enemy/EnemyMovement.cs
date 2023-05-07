@@ -10,6 +10,11 @@ public class EnemyMovement : MonoBehaviour
         WALKING
     }
 
+    [Header("Enemy Setup")]
+    [SerializeField] private float _pauseWalkDuration = 3f;
+    [SerializeField] private float _rotationDuration = .35f;
+
+    [Header("Enemy Routine")]
     [SerializeField] private List<Transform> _pathTransforms;
     [SerializeField] private float _movementSpeed;
     [SerializeField] private float _runSpeed;
@@ -48,11 +53,11 @@ public class EnemyMovement : MonoBehaviour
                     Vector3 destination = _path[i + 1];
                     _directionSpeed = _path[i].x - destination.x;
 
-                    _movementSequence.Append(transform.DORotate(Vector2.up * (_directionSpeed > 0 ? 180f : 0f), .25f));
+                    _movementSequence.Append(transform.DORotate(Vector2.up * (_directionSpeed > 0 ? 180f : 0f), _rotationDuration));
                     _movementSequence.Append(DOTween.To(() => 0f, (i) => { _animator.SetTrigger("Walk"); }, 1f, 0f));
                     _movementSequence.Append(transform.DOMoveX(destination.x, CalculatePathDuration(i)));
                     _movementSequence.Append(DOTween.To(() => 0f, (i) => { _animator.SetTrigger("Idle"); }, 1f, 0f));
-                    _movementSequence.Append(DOTween.To(() => 0f, (time) => { }, 1f, 1f));
+                    _movementSequence.Append(DOTween.To(() => 0f, (time) => { }, 1f, _pauseWalkDuration));
                 }
 
                 _movementSequence.SetLoops(-1);
