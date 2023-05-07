@@ -148,6 +148,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: closet
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1297
+        width: 296
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32c687eb435a56448c4bccd0aa6777b
+      internalID: -1073820979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -159,6 +180,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      closet: -1073820979
       crate: -1890073997
   spritePackingTag: 
   pSDRemoveMatte: 0

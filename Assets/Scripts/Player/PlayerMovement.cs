@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public bool IsProducingSound => _isProducingSound;
+    public bool IsCrouching => _isCrouching;
+    public bool CanMove;
 
     [SerializeField] private float _walkSpeed;
     [SerializeField] private float _runSpeed;
@@ -46,6 +48,10 @@ public class PlayerMovement : MonoBehaviour
         HandleCrouch();
 
         _currentSpeed = GetSpeed();
+        if (!CanMove)
+        {
+            _currentSpeed = 0;
+        }
 
         _directionalSpeed = Input.GetAxis("Horizontal") * _currentSpeed;
         _movementDirection = _directionalSpeed * Vector2.right;

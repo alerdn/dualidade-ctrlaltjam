@@ -4,15 +4,43 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public bool IsProducingSound => _movement.IsProducingSound;
+    public bool IsProducingSound => _movementComponent.IsProducingSound;
     public Transform Head => _head;
 
     [SerializeField] private Transform _head;
 
-    private PlayerMovement _movement;
+    private PlayerMovement _movementComponent;
+    private PlayerStealth _stealthComponent;
+
+    private bool _canHide;
 
     private void Start()
     {
-        _movement = GetComponentInChildren<PlayerMovement>();
+        _movementComponent = GetComponent<PlayerMovement>();
+        _stealthComponent = GetComponent<PlayerStealth>();
+
+        _stealthComponent.OnBehindObstacle += TakeCover;
+    }
+
+    private void Update()
+    {
+        if (_stealthComponent.IsHiddenInside)
+        {
+            _movementComponent.CanMove = false;
+        } else
+        {
+            _movementComponent.CanMove = true;
+        }
+    }
+
+    private void TakeCover()
+    {
+        if (_movementComponent.IsCrouching)
+        {
+            gameObject.layer = LayerMask.NameToLayer("Default");
+        } else
+        {
+            gameObject.layer = LayerMask.NameToLayer("Collidable");
+        }
     }
 }
