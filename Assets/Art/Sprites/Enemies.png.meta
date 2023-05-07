@@ -1244,6 +1244,48 @@ TextureImporter:
         boneIndex[1]: 0
         boneIndex[2]: 0
         boneIndex[3]: 0
+    - serializedVersion: 2
+      name: alert_case
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 202
+        width: 88
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08114083fe2466c4f9aede183e27aef3
+      internalID: -466843537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alert_full
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 330
+        width: 88
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0de7dd3d13a954fbac86455ca47a0a
+      internalID: -1954333393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1255,7 +1297,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      alert_full: -1954333393
       enemy_side: -1367684787
+      alert_case: -466843537
       leg: -1085455080
       enemy_full: 135687347
   spritePackingTag: 
