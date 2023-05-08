@@ -86,7 +86,6 @@ public class EnemyDetection : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(_head.position, (_head.position - player.Head.position) * -1, 100f, LayerMask.GetMask("Collidable"));
         if (hit)
         {
-            Debug.Log(hit.collider.name);
             return hit.transform.GetComponent<Player>() != null;
         }
         else return false;
