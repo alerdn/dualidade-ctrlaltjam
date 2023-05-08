@@ -17,14 +17,14 @@ public class EnemyMovement : MonoBehaviour
     [Header("Enemy Routine")]
     [SerializeField] private List<Transform> _pathTransforms;
     [SerializeField] private float _movementSpeed;
-    [SerializeField] private float _runSpeed;
 
     private Animator _animator;
     private List<Vector3> _path;
-    private float _currentSpeed;
     private float _directionSpeed;
-    private EnemyState _currentState;
-    private Sequence _movementSequence;
+
+    private Coroutine _walkRoutine;
+    private Coroutine _checkDestinationRoutine;
+    private Tween _currentMovementTween;
 
     private void Start()
     {
@@ -32,43 +32,90 @@ public class EnemyMovement : MonoBehaviour
 
         _path = new();
         _pathTransforms.ForEach(path => _path.Add(path.position));
-        _path.Add(_pathTransforms[0].position);
-        _currentSpeed = _movementSpeed;
 
-        HandleBehavior(EnemyState.WALKING);
+        _walkRoutine = StartCoroutine(WalkRoutine());
     }
 
-    private void HandleBehavior(EnemyState newState)
+    public void CheckDestination(Vector2 destination)
     {
-        _currentState = newState;
-        _currentSpeed = _movementSpeed;
-
-        switch (_currentState)
+        if (_checkDestinationRoutine == null)
         {
-            case EnemyState.WALKING:
-                _movementSequence = DOTween.Sequence();
-
-                for (int i = 0; i < _path.Count - 1; i++)
-                {
-                    Vector3 destination = _path[i + 1];
-                    _directionSpeed = _path[i].x - destination.x;
-
-                    _movementSequence.Append(transform.DORotate(Vector2.up * (_directionSpeed > 0 ? 180f : 0f), _rotationDuration));
-                    _movementSequence.Append(DOTween.To(() => 0f, (i) => { _animator.SetTrigger("Walk"); }, 1f, 0f));
-                    _movementSequence.Append(transform.DOMoveX(destination.x, CalculatePathDuration(i)));
-                    _movementSequence.Append(DOTween.To(() => 0f, (i) => { _animator.SetTrigger("Idle"); }, 1f, 0f));
-                    _movementSequence.Append(DOTween.To(() => 0f, (time) => { }, 1f, _pauseWalkDuration));
-                }
-
-                _movementSequence.SetLoops(-1);
-                _movementSequence.Play();
-
-                break;
+            _checkDestinationRoutine = StartCoroutine(CheckDestinationRoutine(destination));
+        }
+        else
+        {
+            StopCoroutine(_checkDestinationRoutine);
+            _checkDestinationRoutine = StartCoroutine(CheckDestinationRoutine(destination, true));
         }
     }
 
-    private float CalculatePathDuration(int index)
+    private IEnumerator CheckDestinationRoutine(Vector2 destination, bool persuing = false)
     {
-        return Vector3.Distance(_path[index], _path[index + 1]) / _currentSpeed;
+        _currentMovementTween?.Kill();
+        StopCoroutine(_walkRoutine);
+
+        _animator.ResetTrigger("Walk");
+        _animator.SetTrigger("Idle");
+        _directionSpeed = transform.position.x - destination.x;
+        _currentMovementTween = transform.DORotate(Vector2.up * (_directionSpeed > 0 ? 180f : 0f), _rotationDuration);
+        yield return _currentMovementTween.WaitForCompletion();
+
+        if (!persuing)
+        {
+            yield return new WaitForSeconds(_pauseWalkDuration / 2f);
+        }
+
+        _animator.ResetTrigger("Idle");
+        _animator.SetTrigger("Walk");
+        _currentMovementTween = transform.DOMoveX(destination.x, CalculatePathDuration(destination));
+        yield return _currentMovementTween.WaitForCompletion();
+
+        _animator.ResetTrigger("Walk");
+        _animator.SetTrigger("Idle");
+        yield return new WaitForSeconds(_pauseWalkDuration);
+
+        _walkRoutine = StartCoroutine(WalkRoutine());
+        _checkDestinationRoutine = null;
+    }
+
+    private IEnumerator WalkRoutine()
+    {
+        foreach (Vector2 destination in Destinations())
+        {
+            _directionSpeed = transform.position.x - destination.x;
+            _currentMovementTween = transform.DORotate(Vector2.up * (_directionSpeed > 0 ? 180f : 0f), _rotationDuration);
+            yield return _currentMovementTween.WaitForCompletion();
+
+            _animator.ResetTrigger("Idle");
+            _animator.SetTrigger("Walk");
+            _currentMovementTween = transform.DOMoveX(destination.x, CalculatePathDuration(destination));
+            yield return _currentMovementTween.WaitForCompletion();
+
+            _animator.ResetTrigger("Walk");
+            _animator.SetTrigger("Idle");
+            yield return new WaitForSeconds(_pauseWalkDuration);
+        }
+    }
+
+    private IEnumerable<Vector2> Destinations()
+    {
+        int currentDestination = 0;
+        while (true)
+        {
+            if (currentDestination < _path.Count)
+            {
+                yield return _path[currentDestination];
+                currentDestination++;
+            }
+            else
+            {
+                currentDestination = 0;
+            }
+        }
+    }
+
+    private float CalculatePathDuration(Vector2 destination)
+    {
+        return Vector3.Distance(transform.position, destination) / _movementSpeed;
     }
 }

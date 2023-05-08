@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class EnemyDetectionHandler : MonoBehaviour
 {
     public event Action OnSpottedPlayer;
+    public event Action<Transform> OnNoticedSomething;
 
     [Header("UI")]
     [SerializeField] private Image _alertCase;
@@ -15,6 +16,7 @@ public class EnemyDetectionHandler : MonoBehaviour
 
     [Header("Setup")]
     [SerializeField] private float _secondsToSpotPlayer = 2f;
+    [SerializeField] private float _minDistanceToAutoSpot = 4f;
     [SerializeField] private List<EnemyDetection> _detections;
 
     private Tween _spottingPlayer;
@@ -28,9 +30,15 @@ public class EnemyDetectionHandler : MonoBehaviour
         });
     }
 
-    private void SpotPlayer(EnemyDetection detection)
+    private void SpotPlayer(EnemyDetection detection, Player player)
     {
-        if (_spottingPlayer != null) return;
+        if (_spottingPlayer != null)
+        {
+            if (player.IsRunning || Vector2.Distance(transform.position, player.transform.position) < _minDistanceToAutoSpot) _spottingPlayer.Complete();
+            return;
+        }
+
+        OnNoticedSomething?.Invoke(player.transform);
 
         _alertCase.enabled = true;
         _alertMeter.fillAmount = 0f;

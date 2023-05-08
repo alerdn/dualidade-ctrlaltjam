@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public bool IsProducingSound => _movementComponent.IsProducingSound;
+    public bool IsRunning => _movementComponent.IsRunning;
     public Transform Head => _head;
 
     [SerializeField] private Transform _head;
@@ -27,7 +28,8 @@ public class Player : MonoBehaviour
         if (_stealthComponent.IsHiddenInside)
         {
             _movementComponent.CanMove = false;
-        } else
+        }
+        else
         {
             _movementComponent.CanMove = true;
         }
@@ -38,7 +40,8 @@ public class Player : MonoBehaviour
         if (_movementComponent.IsCrouching)
         {
             gameObject.layer = LayerMask.NameToLayer("Default");
-        } else
+        }
+        else
         {
             gameObject.layer = LayerMask.NameToLayer("Collidable");
         }

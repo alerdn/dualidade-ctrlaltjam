@@ -282,7 +282,6 @@ MonoBehaviour:
   - {fileID: 2115128465091943764}
   - {fileID: 2115128464148131014}
   _movementSpeed: 2
-  _runSpeed: 2
 --- !u!1 &2115128464031143651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,8 +1121,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 804929841
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!114 &7705959840492218652
 MonoBehaviour:

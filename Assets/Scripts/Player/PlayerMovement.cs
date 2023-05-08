@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public bool IsProducingSound => _isProducingSound;
     public bool IsCrouching => _isCrouching;
+    public bool IsRunning => _isRunning;
     public bool CanMove;
 
     [SerializeField] private float _walkSpeed;

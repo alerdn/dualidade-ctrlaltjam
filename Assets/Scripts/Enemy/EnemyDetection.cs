@@ -11,7 +11,7 @@ public enum DetectionType
 
 public class EnemyDetection : MonoBehaviour
 {
-    public event Action<EnemyDetection> OnNoticeSomething;
+    public event Action<EnemyDetection, Player> OnNoticeSomething;
     public event Action OnLostPlayer;
 
     public bool HasNoticedSomething
@@ -35,7 +35,7 @@ public class EnemyDetection : MonoBehaviour
             HasNoticedSomething = HandleNoticeSomething(player);
             if (HasNoticedSomething)
             {
-                OnNoticeSomething?.Invoke(this);
+                OnNoticeSomething?.Invoke(this, player);
             }
         }
     }
@@ -48,7 +48,7 @@ public class EnemyDetection : MonoBehaviour
             HasNoticedSomething = HandleNoticeSomething(player);
             if (HasNoticedSomething)
             {
-                OnNoticeSomething?.Invoke(this);
+                OnNoticeSomething?.Invoke(this, player);
             }
             else
             {
@@ -69,20 +69,16 @@ public class EnemyDetection : MonoBehaviour
 
     private bool HandleNoticeSomething(Player player)
     {
-        switch (_detectionType)
+        return _detectionType switch
         {
-            case DetectionType.SOUND:
-                return player.IsProducingSound;
-            case DetectionType.SIGHT:
-                return HandleSightDetection(player);
-            default:
-                return true;
-        }
+            DetectionType.SOUND => player.IsProducingSound,
+            DetectionType.SIGHT => HandleSightDetection(player),
+            _ => true,
+        };
     }
 
     private bool HandleSightDetection(Player player)
     {
-        Debug.DrawRay(_head.position, (_head.position - player.Head.position) * -100f, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(_head.position, (_head.position - player.Head.position) * -1, 100f, LayerMask.GetMask("Collidable"));
         if (hit)
         {
