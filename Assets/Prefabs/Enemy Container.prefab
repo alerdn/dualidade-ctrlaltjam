@@ -50,6 +50,7 @@ MonoBehaviour:
   _alertCase: {fileID: 5639850510153921649}
   _alertMeter: {fileID: 4116647373579278039}
   _secondsToSpotPlayer: 2
+  _minDistanceToAutoSpot: 4
   _detections:
   - {fileID: 5625722955026100142}
   - {fileID: 5840353828461188374}
@@ -221,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115128463990528161}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.67, z: 0.041560188}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
