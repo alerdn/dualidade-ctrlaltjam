@@ -221,6 +221,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Icon
       objectReference: {fileID: 0}
+    - target: {fileID: 8755176610771259144, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
+      propertyPath: m_text
+      value: hide
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755176610771259144, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
+      propertyPath: m_fontSize
+      value: 0.65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
 --- !u!1 &300010071552059426 stripped

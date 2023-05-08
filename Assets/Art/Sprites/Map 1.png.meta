@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 654e2264293b5c04d8a956d13af4a6ec
+guid: ba1885d6ad2ce6b4e90b633aa40bb8ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,97 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crate
+      name: sky
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1617
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76fe5275b354d02418ac36feef23b228
-      internalID: -1890073997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: closet
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 1297
-        width: 296
-        height: 619
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a32c687eb435a56448c4bccd0aa6777b
-      internalID: -1073820979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: window
-      rect:
-        serializedVersion: 2
-        x: 1042
-        y: 1291
-        width: 407
-        height: 624
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b3a04c45f9307e4ea9412217b25d80d
-      internalID: 1095541396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_icon
-      rect:
-        serializedVersion: 2
-        x: 1705
-        y: 1772
-        width: 100
-        height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62f719facb9f83040b7b1c47044748ef
-      internalID: -1660344686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: puff
-      rect:
-        serializedVersion: 2
-        x: 1631
-        y: 1577
-        width: 77
-        height: 88
+        x: 0
+        y: 0
+        width: 5760
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +142,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33039e86a74d26a4cabf09a024b1e3f7
-      internalID: -360473181
+      spriteID: 918ff170a909e154592c3dc71eeb3fa5
+      internalID: -679912209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1085
+        width: 5760
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae459e8a78c4ee84ca0b60708448be0d
+      internalID: 319489633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: front
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 5760
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2455ac1d78d2c6b4a98183487a3b2ed8
+      internalID: -1609919008
       vertices: []
       indices: 
       edges: []
@@ -243,11 +201,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      puff: -360473181
-      closet: -1073820979
-      mouse_icon: -1660344686
-      crate: -1890073997
-      window: 1095541396
+      front: -1609919008
+      sky: -679912209
+      back: 319489633
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

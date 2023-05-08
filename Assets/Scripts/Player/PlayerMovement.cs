@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isCrouching)
         {
-            speedModifier = .8f;
+            speedModifier = .5f;
         }
 
         if (_isRunning)
