@@ -94,11 +94,11 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 0.15
-  m_fontSizeBase: 36
+  m_fontSizeBase: 0.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 1
+  m_fontSizeMax: 0.2
   m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

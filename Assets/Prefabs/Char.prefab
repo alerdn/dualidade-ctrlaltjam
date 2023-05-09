@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 512697500}
   - component: {fileID: 179475410846292663}
   - component: {fileID: 1357242547121150579}
+  - component: {fileID: 8484734965611838540}
   m_Layer: 3
   m_Name: Char
   m_TagString: Untagged
@@ -270,6 +271,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactionIcon: {fileID: 2721536853202257430}
+--- !u!114 &8484734965611838540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656576120392271770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2b84740ae49b54da4f96d7cd7dbfb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerBodyRenderer: {fileID: 2656576122332201838}
+  _normalSprite: {fileID: 447963099, guid: 42524690316552648a9f8b61ce70339e, type: 3}
+  _karmaSprite: {fileID: 251705248, guid: 5ce531a831c93b145ac3a435b6acb1e2, type: 3}
 --- !u!1 &2656576120608177597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1181,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8755176610771259144, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
       propertyPath: m_fontSize
-      value: 0.45
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755176610771259144, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755176610771259144, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
