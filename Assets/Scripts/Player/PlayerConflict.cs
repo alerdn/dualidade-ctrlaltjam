@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerConflict : MonoBehaviour
 {
+    public event Action OnDefeatEnemy;
     public bool IsEnemyWithinReach => _enemy != null;
 
     [SerializeField] private GameObject _interactionIcon;
@@ -26,6 +28,7 @@ public class PlayerConflict : MonoBehaviour
             if (IsEnemyWithinReach)
             {
                 _enemy.Kill();
+                OnDefeatEnemy?.Invoke();
             }
         }
     }

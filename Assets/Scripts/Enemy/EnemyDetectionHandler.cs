@@ -10,6 +10,9 @@ public class EnemyDetectionHandler : MonoBehaviour
     public event Action OnSpottedPlayer;
     public event Action<Transform> OnNoticedSomething;
 
+    public EnemyDetection SightDetection => _detections.Find((detection) => detection.DetectionType == DetectionType.SIGHT);
+
+
     [Header("UI")]
     [SerializeField] private Image _alertCase;
     [SerializeField] private Image _alertMeter;

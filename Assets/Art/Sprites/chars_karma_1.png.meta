@@ -519,7 +519,7 @@ TextureImporter:
         boneIndex[2]: 0
         boneIndex[3]: 0
     - serializedVersion: 2
-      name: side
+      name: char_lateral_karma_1
       rect:
         serializedVersion: 2
         x: 226
@@ -1179,7 +1179,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       front: -711211303
-      side: 251705248
+      char_lateral_karma_1: 251705248
       leg: 901694077
   spritePackingTag: 
   pSDRemoveMatte: 0

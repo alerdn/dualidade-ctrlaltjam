@@ -1,28 +1,55 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerKarma : MonoBehaviour
 {
+    public event Action<int> OnKarmaLevelIncreased;
+
+    public int EnemyDefeated
+    {
+        get => _enemyDefeated;
+        set
+        {
+            _enemyDefeated = value;
+            CheckKarmaLevel();
+        }
+    }
+
+    public int KarmaLevel => _currentKarmaLevel;
+
+    [Header("Setup")]
+    [SerializeField] private int _minEnemiesToChange = 3;
+
+    [Header("Sprites")]
     [SerializeField] private SpriteRenderer _playerBodyRenderer;
-    [SerializeField] private Sprite _normalSprite;
-    [SerializeField] private Sprite _karmaSprite;
+    [NonReorderable] [SerializeField] private List<Sprite> _sprites;
+
+    private int _enemyDefeated;
+    private int _currentKarmaLevel;
 
     private void Start()
     {
-        ChangeSprite(_normalSprite);
+        CheckKarmaLevel();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ChangeSprite();
+            EnemyDefeated++;
         }
     }
 
-    public void ChangeSprite(Sprite sprite = null)
+    public void CheckKarmaLevel()
     {
-        _playerBodyRenderer.sprite = sprite != null ? sprite : (_playerBodyRenderer.sprite == _normalSprite ? _karmaSprite : _normalSprite);
+        int nextLevel = EnemyDefeated / _minEnemiesToChange;
+        nextLevel = nextLevel < _sprites.Count ? nextLevel : _sprites.Count - 1;
+
+        if (nextLevel > _currentKarmaLevel) OnKarmaLevelIncreased?.Invoke(nextLevel);
+
+        _currentKarmaLevel = nextLevel;
+        _playerBodyRenderer.sprite = _sprites[_currentKarmaLevel];
     }
 }

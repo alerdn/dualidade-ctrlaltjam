@@ -20,12 +20,17 @@ public class EnemyDetection : MonoBehaviour
         private set => _hasNoticedSomething = value;
     }
     public bool HasSpottedPlayer;
+    public DetectionType DetectionType => _detectionType;
 
     [SerializeField] private DetectionType _detectionType;
-    [SerializeField] private Transform _head;
 
-    [Header("Debug")]
-    [SerializeField] public bool _hasNoticedSomething;
+    [Header("Sight Setup")]
+    [SerializeField] private Transform _head;
+    [SerializeField] private BoxCollider2D _sightBoxCollider;
+    [SerializeField] private float _boxWidthBase = 4f;
+    [SerializeField] private float _boxWidthMax = 14f;
+
+    private bool _hasNoticedSomething;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,6 +70,17 @@ public class EnemyDetection : MonoBehaviour
             HasNoticedSomething = false;
             OnLostPlayer?.Invoke();
         }
+    }
+
+    public void IncreaseSightCollider(int karmaLevel)
+    {
+        if (_sightBoxCollider == null) return;
+
+        float xBase = _boxWidthBase * ((float)karmaLevel + 1f);
+        xBase = xBase < _boxWidthMax ? xBase : _boxWidthMax;
+
+        _sightBoxCollider.size = new Vector2(xBase, 4f);
+        _sightBoxCollider.offset = new Vector2(xBase / 1.875f, 0f);
     }
 
     private bool HandleNoticeSomething(Player player)

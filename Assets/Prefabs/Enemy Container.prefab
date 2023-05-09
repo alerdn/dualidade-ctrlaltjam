@@ -1014,7 +1014,7 @@ MonoBehaviour:
   HasSpottedPlayer: 0
   _detectionType: 0
   _head: {fileID: 0}
-  _hasNoticedSomething: 0
+  _sightBoxCollider: {fileID: 0}
 --- !u!1 &4152493336291559967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1273,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.2, y: 0}
+  m_Offset: {x: 2.13, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1284,7 +1284,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 4}
+  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
 --- !u!114 &5840353828461188374
 MonoBehaviour:
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   HasSpottedPlayer: 0
   _detectionType: 1
   _head: {fileID: 8695322948523248327}
-  _hasNoticedSomething: 0
+  _sightBoxCollider: {fileID: 2366742937757530504}
 --- !u!1 &7279302957980894025
 GameObject:
   m_ObjectHideFlags: 0
