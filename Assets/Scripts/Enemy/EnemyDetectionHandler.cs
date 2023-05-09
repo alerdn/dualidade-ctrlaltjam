@@ -18,7 +18,8 @@ public class EnemyDetectionHandler : MonoBehaviour
     [SerializeField] private Image _alertMeter;
 
     [Header("Setup")]
-    [SerializeField] private float _secondsToSpotPlayer = 2f;
+    [SerializeField] private float _secondsToSpotPlayer = 3f;
+    [SerializeField] private float _minSecondsToSpotPlayer = .25f;
     [SerializeField] private float _minDistanceToAutoSpot = 4f;
     [SerializeField] private List<EnemyDetection> _detections;
 
@@ -31,6 +32,12 @@ public class EnemyDetectionHandler : MonoBehaviour
             detection.OnNoticeSomething += SpotPlayer;
             detection.OnLostPlayer += LostPlayer;
         });
+    }
+
+    public void IncreaseDetectionSpeed(int karmaLevel)
+    {
+        float newTimeToSpotPlayer = _secondsToSpotPlayer - karmaLevel;
+        _secondsToSpotPlayer = newTimeToSpotPlayer > _minSecondsToSpotPlayer ? newTimeToSpotPlayer : _minSecondsToSpotPlayer;
     }
 
     private void SpotPlayer(EnemyDetection detection, Player player)

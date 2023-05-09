@@ -220,7 +220,7 @@ TextureImporter:
         width: 77
         height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,6 +228,132 @@ TextureImporter:
       bones: []
       spriteID: 33039e86a74d26a4cabf09a024b1e3f7
       internalID: -360473181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrafa_1
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1292
+        width: 58
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd430d7a0fa3174cb266e1a8d998d8f
+      internalID: 1885840096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrafa_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1292
+        width: 58
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2074744fbf68d44aabb018216e3b435
+      internalID: 1980570927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrafa_3
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1292
+        width: 58
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93b872dc94e05f4887e21ade98117d0
+      internalID: 622560317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thrownables_icon
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1716
+        width: 103
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c44f583fa8e4934b9fa4eda2ba48ddf
+      internalID: 1965103707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: key_icon
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 1554
+        width: 88
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2718390242a58e498a754531ab12608
+      internalID: -309867774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: key
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1339
+        width: 76
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd0ae59dc16b2947a8bb8a35a831710
+      internalID: 1531497577
       vertices: []
       indices: 
       edges: []
@@ -244,7 +370,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       puff: -360473181
+      key: 1531497577
+      garrafa_1: 1885840096
+      thrownables_icon: 1965103707
+      key_icon: -309867774
       closet: -1073820979
+      garrafa_2: 1980570927
+      garrafa_3: 622560317
       mouse_icon: -1660344686
       crate: -1890073997
       window: 1095541396
