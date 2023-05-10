@@ -25,8 +25,8 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnNoticedSomething(Transform playerLocation)
+    private void OnNoticedSomething(Transform targetLocation)
     {
-        _movement.CheckDestination(playerLocation.position);
+        _movement.CheckDestination(targetLocation.position);
     }
 }

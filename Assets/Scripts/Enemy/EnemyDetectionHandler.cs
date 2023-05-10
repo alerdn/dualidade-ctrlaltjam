@@ -29,6 +29,7 @@ public class EnemyDetectionHandler : MonoBehaviour
     {
         _detections.ForEach(detection =>
         {
+            detection.OnNoticeObject += OnNoticedSomething;
             detection.OnNoticeSomething += SpotPlayer;
             detection.OnLostPlayer += LostPlayer;
         });

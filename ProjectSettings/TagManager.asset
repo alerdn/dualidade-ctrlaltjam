@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - HidingPlace
   - Enemy
+  - Thrownable
+  - Floor
   layers:
   - Default
   - TransparentFX

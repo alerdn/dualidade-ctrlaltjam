@@ -18,8 +18,7 @@ public class Player : MonoBehaviour
     private PlayerStealth _stealthComponent;
     private PlayerConflict _conflictComponent;
     private PlayerKarma _karmaComponent;
-
-    private bool _canHide;
+    private PlayerThrow _throwComponent;
 
     private void Start()
     {
@@ -27,6 +26,7 @@ public class Player : MonoBehaviour
         _stealthComponent = GetComponent<PlayerStealth>();
         _conflictComponent = GetComponent<PlayerConflict>();
         _karmaComponent = GetComponent<PlayerKarma>();
+        _throwComponent = GetComponent<PlayerThrow>();
 
         _stealthComponent.OnBehindObstacle += TakeCover;
         _conflictComponent.OnDefeatEnemy += OnDefeatEnemy;

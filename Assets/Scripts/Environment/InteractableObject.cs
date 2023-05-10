@@ -13,16 +13,13 @@ public class InteractableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _interactionIcon.SetActive(true);
-    }
-    
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        _interactionIcon.SetActive(true);
+        if (collision.GetComponent<Player>())
+            _interactionIcon.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _interactionIcon.SetActive(false);
+        if (collision.GetComponent<Player>())
+            _interactionIcon.SetActive(false);
     }
 }

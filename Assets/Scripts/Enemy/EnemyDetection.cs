@@ -12,6 +12,7 @@ public enum DetectionType
 public class EnemyDetection : MonoBehaviour
 {
     public event Action<EnemyDetection, Player> OnNoticeSomething;
+    public event Action<Transform> OnNoticeObject;
     public event Action OnLostPlayer;
 
     public bool HasNoticedSomething
@@ -33,6 +34,8 @@ public class EnemyDetection : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Player player = collision.gameObject.GetComponent<Player>();
+
+
         if (player)
         {
             HasNoticedSomething = HandleNoticeSomething(player);
@@ -41,11 +44,15 @@ public class EnemyDetection : MonoBehaviour
                 OnNoticeSomething?.Invoke(this, player);
             }
         }
+
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         Player player = collision.gameObject.GetComponent<Player>();
+        bool objectSeen = collision.CompareTag("Thrownable");
+
         if (player)
         {
             HasNoticedSomething = HandleNoticeSomething(player);
@@ -57,6 +64,10 @@ public class EnemyDetection : MonoBehaviour
             {
                 OnLostPlayer?.Invoke();
             }
+        }
+        else if (objectSeen)
+        {
+            OnNoticeObject?.Invoke(collision.transform);
         }
     }
 
