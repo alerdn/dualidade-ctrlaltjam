@@ -17,17 +17,17 @@ public class PlayerKarma : MonoBehaviour
         }
     }
 
-    public int KarmaLevel => _currentKarmaLevel;
+    public int KarmaLevel => _currentKarmaLevel.Value;
 
     [Header("Setup")]
     [SerializeField] private int _minEnemiesToChange = 3;
+    [SerializeField] private SOInt _currentKarmaLevel;
 
     [Header("Sprites")]
     [SerializeField] private SpriteRenderer _playerBodyRenderer;
     [NonReorderable] [SerializeField] private List<Sprite> _sprites;
 
     private int _enemyDefeated;
-    private int _currentKarmaLevel;
 
     private void Start()
     {
@@ -47,9 +47,9 @@ public class PlayerKarma : MonoBehaviour
         int nextLevel = EnemyDefeated / _minEnemiesToChange;
         nextLevel = nextLevel < _sprites.Count ? nextLevel : _sprites.Count - 1;
 
-        if (nextLevel > _currentKarmaLevel) OnKarmaLevelIncreased?.Invoke(nextLevel);
+        if (nextLevel > _currentKarmaLevel.Value) OnKarmaLevelIncreased?.Invoke(nextLevel);
 
-        _currentKarmaLevel = nextLevel;
-        _playerBodyRenderer.sprite = _sprites[_currentKarmaLevel];
+        _currentKarmaLevel.Value = nextLevel;
+        _playerBodyRenderer.sprite = _sprites[_currentKarmaLevel.Value];
     }
 }

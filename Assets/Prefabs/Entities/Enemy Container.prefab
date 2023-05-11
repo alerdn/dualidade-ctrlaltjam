@@ -50,7 +50,7 @@ MonoBehaviour:
   _alertCase: {fileID: 5639850510153921649}
   _alertMeter: {fileID: 4116647373579278039}
   _secondsToSpotPlayer: 2
-  _minSecondsToSpotPlayer: 0.25
+  _minSecondsToSpotPlayer: 0.15
   _minDistanceToAutoSpot: 4
   _detections:
   - {fileID: 5625722955026100142}
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseWalkDuration: 3
   _rotationDuration: 0.35
+  _enemyMode: 0
   _pathTransforms:
   - {fileID: 2115128465091943764}
   - {fileID: 2115128464148131014}

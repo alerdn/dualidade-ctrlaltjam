@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -221,9 +221,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Icon
       objectReference: {fileID: 0}
+    - target: {fileID: 1510783002461972812, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8755176610771259144, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
       propertyPath: m_text
-      value: hide
+      value: esconder-se
       objectReference: {fileID: 0}
     - target: {fileID: 8755176610771259144, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
       propertyPath: m_fontSize

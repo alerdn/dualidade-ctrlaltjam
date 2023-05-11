@@ -104,6 +104,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleRun()
     {
+        if (!CanMove) return;
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             _isRunning = true;
@@ -116,6 +118,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleCrouch()
     {
+        if (!CanMove) return;
+
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             _isCrouching = !_isCrouching;

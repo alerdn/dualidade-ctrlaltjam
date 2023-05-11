@@ -5,9 +5,10 @@ using DG.Tweening;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public enum EnemyState
+    public enum EnemyMode
     {
-        WALKING
+        PATROLLING,
+        STAND_WATCH
     }
 
     [Header("Enemy Setup")]
@@ -15,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float _rotationDuration = .35f;
 
     [Header("Enemy Routine")]
+    [SerializeField] private EnemyMode _enemyMode = EnemyMode.PATROLLING;
     [SerializeField] private List<Transform> _pathTransforms;
     [SerializeField] private float _movementSpeed;
 
@@ -52,13 +54,23 @@ public class EnemyMovement : MonoBehaviour
     private IEnumerator CheckDestinationRoutine(Vector2 destination, bool persuing = false)
     {
         _currentMovementTween?.Kill();
-        StopCoroutine(_walkRoutine);
+        if (_walkRoutine != null) StopCoroutine(_walkRoutine);
 
         _animator.ResetTrigger("Walk");
         _animator.SetTrigger("Idle");
+
+        float _previousDirectionSpeed = _directionSpeed;
         _directionSpeed = transform.position.x - destination.x;
+
         _currentMovementTween = transform.DORotate(Vector2.up * (_directionSpeed > 0 ? 180f : 0f), _rotationDuration);
         yield return _currentMovementTween.WaitForCompletion();
+
+        if (_enemyMode == EnemyMode.STAND_WATCH)
+        {
+            yield return new WaitForSeconds(3f);
+            yield return transform.DORotate(Vector2.zero, _rotationDuration).WaitForCompletion();
+            yield break;
+        }
 
         if (!persuing)
         {
@@ -100,7 +112,7 @@ public class EnemyMovement : MonoBehaviour
     private IEnumerable<Vector2> Destinations()
     {
         int currentDestination = 0;
-        while (true)
+        while (_path.Count > 0)
         {
             if (currentDestination < _path.Count)
             {

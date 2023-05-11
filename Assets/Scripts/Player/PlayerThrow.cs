@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerThrow : MonoBehaviour
 {
+    public bool CanThrow = true;
+
     [SerializeField] private GameObject _thrownableItem;
     [SerializeField] private GameObject _interactionIcon;
 
@@ -22,6 +24,14 @@ public class PlayerThrow : MonoBehaviour
 
     private void Update()
     {
+        if (!CanThrow)
+        {
+            Cursor.visible = true;
+            _interactionIcon.SetActive(false);
+            if (_thrownable != null) Destroy(_thrownable);
+            return;
+        }
+
         HandleThrownMode();
         HandleThrowIcon();
 

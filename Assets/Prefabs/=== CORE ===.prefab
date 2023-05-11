@@ -111,6 +111,9 @@ MonoBehaviour:
   _keys: {fileID: 11400000, guid: 194f34b83802860438be2b75e910444a, type: 2}
   _player: {fileID: 0}
   _enemiesContainer: {fileID: 0}
+  _doorHandler: {fileID: 0}
+  _endScreen: {fileID: 0}
+  _canvaAnimator: {fileID: 0}
 --- !u!1 &6566533932565739150
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +495,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6566533934267978257}
   - component: {fileID: 6566533934267978262}
+  - component: {fileID: 1917780218104089147}
+  - component: {fileID: 864212634330337506}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -553,3 +558,32 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 6566533933784439082}
+--- !u!114 &1917780218104089147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6566533934267978256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1fabc39e0b8ba40b194f92b384917a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &864212634330337506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6566533934267978256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 0}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0

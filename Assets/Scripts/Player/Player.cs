@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
     public event Action<int> OnKarmaLevelIncreased;
 
     public bool IsProducingSound => _movementComponent.IsProducingSound;
     public bool IsRunning => _movementComponent.IsRunning;
     public Transform Head => _head;
     public int KarmaLevel => _karmaComponent.KarmaLevel;
+    public int EnemyDefeated => _karmaComponent.EnemyDefeated;
 
     [SerializeField] private Transform _head;
 
@@ -19,6 +22,20 @@ public class Player : MonoBehaviour
     private PlayerConflict _conflictComponent;
     private PlayerKarma _karmaComponent;
     private PlayerThrow _throwComponent;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Instance.transform.position = transform.position;
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -35,13 +52,31 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.IsPlayerLocked || GameManager.Instance.IsGameOver)
+        {
+            _movementComponent.CanMove = false;
+            _conflictComponent.CanExecute = false;
+            _throwComponent.CanThrow = false;
+
+            return;
+        }
+
+        IsHiddenCheck();
+    }
+
+    private void IsHiddenCheck()
+    {
         if (_stealthComponent.IsHiddenInside)
         {
             _movementComponent.CanMove = false;
+            _conflictComponent.CanExecute = false;
+            _throwComponent.CanThrow = false;
         }
         else
         {
             _movementComponent.CanMove = true;
+            _conflictComponent.CanExecute = true;
+            _throwComponent.CanThrow = true;
         }
     }
 

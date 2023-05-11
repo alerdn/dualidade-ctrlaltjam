@@ -358,6 +358,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: door
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 705
+        width: 296
+        height: 516
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fdceed3bacf994d853f7b4eaae2bc7
+      internalID: -767509080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phone
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 675
+        width: 274
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8006bc5984e8474a9f687e5a6cc8837
+      internalID: 1778068498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locked_door
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 704
+        width: 296
+        height: 516
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674ec6669bafcde47a3907aa371c7689
+      internalID: 876203519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -369,16 +432,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      door: -767509080
       puff: -360473181
       key: 1531497577
       garrafa_1: 1885840096
       thrownables_icon: 1965103707
       key_icon: -309867774
       closet: -1073820979
+      phone: 1778068498
       garrafa_2: 1980570927
       garrafa_3: 622560317
       mouse_icon: -1660344686
       crate: -1890073997
+      locked_door: 876203519
       window: 1095541396
   spritePackingTag: 
   pSDRemoveMatte: 0
