@@ -12,6 +12,8 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] private Button _nextButton;
     [SerializeField] private TMP_Text _textField;
+    [SerializeField] private TMP_Text _speakerField;
+    [SerializeField] private string _speakerName;
     [SerializeField] private List<string> _texts;
     [SerializeField] private float timeBtwChars = 0.1f;
 
@@ -22,6 +24,8 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
+        if (_speakerName != "") _speakerField.text = _speakerName;
+
         _typeSound = GetComponent<AudioSource>();
         transform.DOScale(Vector3.zero, .5f).From();
 

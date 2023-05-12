@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Thrownable
   - Floor
+  - NPC
   layers:
   - Default
   - TransparentFX

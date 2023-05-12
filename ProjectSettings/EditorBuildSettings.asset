@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_Level03.unity
     guid: 64fcc95d4c7edf54e94cf87d0d71bca3
+  - enabled: 1
+    path: Assets/Scenes/SCN_Level04.unity
+    guid: 2aaaa21cb8d725a448fab90afd0bccb7
+  - enabled: 1
+    path: Assets/Scenes/SCN_End.unity
+    guid: f50528a938b346944922364e07268b88
   m_configObjects: {}

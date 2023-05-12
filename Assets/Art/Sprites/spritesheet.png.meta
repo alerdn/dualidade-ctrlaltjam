@@ -421,6 +421,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: crate_scene
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 784
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654d183348f454a498fba7e5af95714e
+      internalID: -1771611483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wardrobe_scene
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 586
+        width: 296
+        height: 619
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698beea939e56054db21045d8399c20d
+      internalID: 340219068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -435,6 +477,7 @@ TextureImporter:
       door: -767509080
       puff: -360473181
       key: 1531497577
+      crate_scene: -1771611483
       garrafa_1: 1885840096
       thrownables_icon: 1965103707
       key_icon: -309867774
@@ -446,6 +489,7 @@ TextureImporter:
       crate: -1890073997
       locked_door: 876203519
       window: 1095541396
+      wardrobe_scene: 340219068
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -2607,12 +2607,12 @@ PrefabInstance:
     - target: {fileID: 3531967573818186241, guid: ddf8c47803cd76a4bbe0c0ea05029a07, type: 3}
       propertyPath: _texts.Array.data[0]
       value: "Owly, voc\xEA est\xE1 bem? Soube que est\xE1 entrando em Ratown. Por
-        favor, tenha cuidado, voc\xEA n\xE3o \xE9 nada bem-vinda a\xED."
+        favor, tenha cuidado, voc\xEA n\xE3o \xE9 nada bem-vinda a\xED"
       objectReference: {fileID: 0}
     - target: {fileID: 3531967573818186241, guid: ddf8c47803cd76a4bbe0c0ea05029a07, type: 3}
       propertyPath: _texts.Array.data[1]
       value: "Recebi informa\xE7\xF5es sobre o paradeiro da Laila, ela est\xE1 sendo
-        mantida em um dos galp\xF5es do porto, s\xF3 n\xE3o sei dizer em qual."
+        mantida em um dos galp\xF5es do porto, s\xF3 n\xE3o sei dizer em qual"
       objectReference: {fileID: 0}
     - target: {fileID: 3531967573818186255, guid: ddf8c47803cd76a4bbe0c0ea05029a07, type: 3}
       propertyPath: m_Name

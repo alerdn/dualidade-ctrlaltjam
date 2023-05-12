@@ -161,7 +161,7 @@ AnimationClip:
   m_Events:
   - time: 1
     functionName: LoadScene
-    data: SCN_Menu
+    data: SCN_Level04
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

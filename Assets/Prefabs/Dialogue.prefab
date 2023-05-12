@@ -313,6 +313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nextButton: {fileID: 3531967573804037807}
   _textField: {fileID: 3531967574651275894}
+  _speakerField: {fileID: 7414068607023913071}
+  _speakerName: 
   _texts:
   - "Owly, voc\xEA est\xE1 bem? Soube que est\xE1 entrando na cidade dos ratos. Tenha
     cuidado por favor, voc\xEA n\xE3o \xE9 nada bem vinda aqui."
