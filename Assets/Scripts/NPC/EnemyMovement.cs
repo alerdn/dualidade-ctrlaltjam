@@ -17,8 +17,11 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Enemy Routine")]
     [SerializeField] private EnemyMode _enemyMode = EnemyMode.PATROLLING;
+    [Header("Patrolling Setup")]
     [SerializeField] private List<Transform> _pathTransforms;
     [SerializeField] private float _movementSpeed;
+    [Header("Stand watch Setup")]
+    [SerializeField] private float _originalStandDirection;
 
     private Animator _animator;
     private List<Vector3> _path;
@@ -35,6 +38,14 @@ public class EnemyMovement : MonoBehaviour
         _path = new();
         _pathTransforms.ForEach(path => _path.Add(path.position));
 
+        _walkRoutine = StartCoroutine(WalkRoutine());
+    }
+
+    public void StartWalkRoutine()
+    {
+        if (_walkRoutine != null) StopCoroutine(_walkRoutine);
+
+        _enemyMode = EnemyMode.PATROLLING;
         _walkRoutine = StartCoroutine(WalkRoutine());
     }
 
@@ -59,7 +70,6 @@ public class EnemyMovement : MonoBehaviour
         _animator.ResetTrigger("Walk");
         _animator.SetTrigger("Idle");
 
-        float _previousDirectionSpeed = _directionSpeed;
         _directionSpeed = transform.position.x - destination.x;
 
         _currentMovementTween = transform.DORotate(Vector2.up * (_directionSpeed > 0 ? 180f : 0f), _rotationDuration);
@@ -68,7 +78,7 @@ public class EnemyMovement : MonoBehaviour
         if (_enemyMode == EnemyMode.STAND_WATCH)
         {
             yield return new WaitForSeconds(3f);
-            yield return transform.DORotate(Vector2.zero, _rotationDuration).WaitForCompletion();
+            yield return transform.DORotate(Vector2.up * _originalStandDirection, _rotationDuration).WaitForCompletion();
             yield break;
         }
 
@@ -92,6 +102,8 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator WalkRoutine()
     {
+        if (_enemyMode != EnemyMode.PATROLLING) yield break;
+
         foreach (Vector2 destination in Destinations())
         {
             _directionSpeed = transform.position.x - destination.x;

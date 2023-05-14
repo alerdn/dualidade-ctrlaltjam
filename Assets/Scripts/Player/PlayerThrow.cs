@@ -42,7 +42,7 @@ public class PlayerThrow : MonoBehaviour
 
     private void HandleThrownMode()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Mouse1))
         {
             if (_thrownablesSO.Value <= 0) return;
 
