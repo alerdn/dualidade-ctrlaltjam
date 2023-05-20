@@ -17,7 +17,7 @@ public class Thrownable : MonoBehaviour
         {
             gameObject.tag = "Thrownable";
             _breakSfx.Play();
-            Destroy(gameObject, .5f);
+            Destroy(gameObject);
         }
     }
 }
