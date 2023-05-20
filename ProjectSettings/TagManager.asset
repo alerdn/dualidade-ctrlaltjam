@@ -50,3 +50,6 @@ TagManager:
   - name: Char
     uniqueID: 804929841
     locked: 0
+  - name: BehindLight
+    uniqueID: 272074585
+    locked: 0

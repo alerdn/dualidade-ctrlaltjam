@@ -463,6 +463,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: lamp
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 226
+        width: 208
+        height: 414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e526ac78a1a985e4386c07d4891f3147
+      internalID: -1541012741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulb
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 195
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a87aa4be952a048a596ca954c64cf7
+      internalID: 203884169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -477,6 +519,7 @@ TextureImporter:
       door: -767509080
       puff: -360473181
       key: 1531497577
+      lamp: -1541012741
       crate_scene: -1771611483
       garrafa_1: 1885840096
       thrownables_icon: 1965103707
@@ -490,6 +533,7 @@ TextureImporter:
       locked_door: 876203519
       window: 1095541396
       wardrobe_scene: 340219068
+      bulb: 203884169
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
