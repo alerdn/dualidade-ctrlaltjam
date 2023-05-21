@@ -1230,6 +1230,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2958344772040570722, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6566533932558017807, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1314,6 +1318,14 @@ PrefabInstance:
       propertyPath: m_Lens.OrthographicSize
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7151131901226610737, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151131901226610737, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: f8f09eeb6195b0f448d4f31d07c5ee71, type: 2}
     m_RemovedComponents:
     - {fileID: 6566533933784439086, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9baec2d86178d084196ca739d186ddde, type: 3}

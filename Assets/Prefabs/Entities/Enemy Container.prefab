@@ -191,7 +191,7 @@ MonoBehaviour:
   - {fileID: 2115128464373799539}
   - {fileID: 2115128465157718686}
   m_Bounds:
-    m_Center: {x: 0.0000011026859, y: -0.00035011768, z: 0}
+    m_Center: {x: 0.00000014901161, y: -0.0003503561, z: 0}
     m_Extent: {x: 0.30000016, y: 1.01172, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -512,8 +512,8 @@ MonoBehaviour:
   - {fileID: 2115128463404597977}
   - {fileID: 2115128464031143648}
   m_Bounds:
-    m_Center: {x: 0.0000011026859, y: -0.00035011768, z: 0}
-    m_Extent: {x: 0.30000016, y: 1.01172, z: 0}
+    m_Center: {x: -0.00000008940697, y: -0.0003503561, z: 0}
+    m_Extent: {x: 0.29999992, y: 1.01172, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -684,8 +684,8 @@ MonoBehaviour:
   - {fileID: 2115128465035680582}
   - {fileID: 2115128465310487226}
   m_Bounds:
-    m_Center: {x: -0.00000059604645, y: -0.00000023841858, z: 0}
-    m_Extent: {x: 0.7000005, y: 1.7400002, z: 0}
+    m_Center: {x: 0, y: -0.00000023841858, z: 0}
+    m_Extent: {x: 0.70000017, y: 1.7400004, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -989,7 +989,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.1537468}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1000,7 +1000,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 4}
+  m_Size: {x: 10, y: 6.3074927}
   m_EdgeRadius: 0
 --- !u!114 &5625722955026100142
 MonoBehaviour:
@@ -1276,7 +1276,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.2, y: 0}
+  m_Offset: {x: 3.1999998, y: -1.1694074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1287,7 +1287,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 4}
+  m_Size: {x: 6, y: 6.3388147}
   m_EdgeRadius: 0
 --- !u!114 &5840353828461188374
 MonoBehaviour:

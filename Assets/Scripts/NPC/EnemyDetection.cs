@@ -35,7 +35,6 @@ public class EnemyDetection : MonoBehaviour
     {
         Player player = collision.gameObject.GetComponent<Player>();
 
-
         if (player)
         {
             HasNoticedSomething = HandleNoticeSomething(player);
@@ -44,8 +43,6 @@ public class EnemyDetection : MonoBehaviour
                 OnNoticeSomething?.Invoke(this, player);
             }
         }
-
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
