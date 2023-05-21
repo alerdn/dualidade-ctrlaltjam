@@ -5365,6 +5365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1169630211}
     m_Modifications:
+    - target: {fileID: 4929925375201049467, guid: 8f0d71b3e4e29814e8ebaa06604a617c, type: 3}
+      propertyPath: m_ShadowVolumeIntensityEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6880468854498719128, guid: 8f0d71b3e4e29814e8ebaa06604a617c, type: 3}
       propertyPath: m_RootOrder
       value: 14

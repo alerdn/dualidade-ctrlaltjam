@@ -493,7 +493,7 @@ TextureImporter:
         width: 94
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -501,6 +501,27 @@ TextureImporter:
       bones: []
       spriteID: b4a87aa4be952a048a596ca954c64cf7
       internalID: 203884169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saida
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 507
+        width: 218
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092c66891a0d97e428c7df43e89e70b2
+      internalID: 1478293053
       vertices: []
       indices: 
       edges: []
@@ -523,6 +544,7 @@ TextureImporter:
       crate_scene: -1771611483
       garrafa_1: 1885840096
       thrownables_icon: 1965103707
+      saida: 1478293053
       key_icon: -309867774
       closet: -1073820979
       phone: 1778068498
