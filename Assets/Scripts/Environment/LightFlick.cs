@@ -39,7 +39,7 @@ public class LightFlick : MonoBehaviour
                     .WaitForCompletion(),
 
                 LightFlickType.SMOOTH => DOTween
-                    .To(() => _light.intensity, (intensity) => _light.intensity = intensity, _light.intensity * _lowerPercentage, 2f)
+                    .To(() => _light.intensity, (intensity) => _light.intensity = intensity, _light.intensity * _lowerPercentage, .5f)
                     .SetLoops(2, LoopType.Yoyo)
                     .WaitForCompletion(),
 
