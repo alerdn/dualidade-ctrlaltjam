@@ -526,6 +526,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: duto
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 491
+        width: 783
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b148b42dfb0246b4b9c60a558ec51561
+      internalID: -1321822377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duto_inout
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 279
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a265deab638dcfe4fadb7b3dd59ac98a
+      internalID: -796275342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -539,6 +581,7 @@ TextureImporter:
     nameFileIdTable:
       door: -767509080
       puff: -360473181
+      duto: -1321822377
       key: 1531497577
       lamp: -1541012741
       crate_scene: -1771611483
@@ -553,6 +596,7 @@ TextureImporter:
       mouse_icon: -1660344686
       crate: -1890073997
       locked_door: 876203519
+      duto_inout: -796275342
       window: 1095541396
       wardrobe_scene: 340219068
       bulb: 203884169
