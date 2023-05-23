@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private GameObject _enemiesContainer;
     [SerializeField] private DoorHandler _doorHandler;
+    [SerializeField] private DuctExit _ductExit;
 
     [Header("UI")]
     [SerializeField] private EndScreen _endScreen;
@@ -41,7 +42,8 @@ public class GameManager : MonoBehaviour
         _enemies = _enemiesContainer.GetComponentsInChildren<Enemy>().ToList();
         _enemies.ForEach((enemy) => enemy.DetectionHandler.OnSpottedPlayer += GameOver);
 
-        _doorHandler.OnAreaLeave += OnAreaLeave;
+        if (_doorHandler) _doorHandler.OnAreaLeave += OnAreaLeave;
+        if (_ductExit) _ductExit.OnAreaLeave += OnAreaLeave;
     }
 
     private void OnKarmaLevelIncreased(int nextKarmaLevel)
