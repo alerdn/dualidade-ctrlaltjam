@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCConversant : MonoBehaviour
 {
-    [SerializeField] private Dialogue _dialogue;
+    [SerializeField] private DialogueV2 _dialogue;
     [SerializeField] private GameObject _interactionIcon;
     [SerializeField] private bool _autoTalk;
 

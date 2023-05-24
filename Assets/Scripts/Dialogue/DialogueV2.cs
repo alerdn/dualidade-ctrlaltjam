@@ -46,19 +46,19 @@ public class DialogueV2 : MonoBehaviour
             _isTyping = false;
             return;
         }
-        _isTyping = true;
-
-        if (_currentDialogueIndex + 1 >= _dialogueDatas.Count)
-        {
-            _typingRoutine = null;
-            _isTyping = false;
-            OnDialogueFinished?.Invoke();
-            return;
-        }
+        _isTyping = true;  
 
         /// Muda o speaker
         if (_currentTextIndex + 1 > _dialogueDatas[_currentDialogueIndex]._texts.Count - 1)
         {
+            if (_currentDialogueIndex + 1 >= _dialogueDatas.Count)
+            {
+                _typingRoutine = null;
+                _isTyping = false;
+                OnDialogueFinished?.Invoke();
+                return;
+            }
+
             _speakerImage.transform.DOScale(0f, .25f).From();
             _currentDialogueIndex++;
             _currentTextIndex = -1;
