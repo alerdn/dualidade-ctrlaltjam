@@ -568,6 +568,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: knife
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1350
+        width: 142
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8a4c65491a56f42802e0386eb4343d
+      internalID: 1134822146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lamparina
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 286
+        width: 108
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142160865a36eb04caf7260361044356
+      internalID: 1516089986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -580,12 +622,14 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       door: -767509080
+      lamparina: 1516089986
       puff: -360473181
       duto: -1321822377
       key: 1531497577
       lamp: -1541012741
       crate_scene: -1771611483
       garrafa_1: 1885840096
+      knife: 1134822146
       thrownables_icon: 1965103707
       saida: 1478293053
       key_icon: -309867774

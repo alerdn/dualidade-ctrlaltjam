@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public bool IsProtected => _isProtected;
     public EnemyDetectionHandler DetectionHandler => _detectionHandler;
 
     [SerializeField] private ParticleSystem _deathEffect;
+    [SerializeField] private bool _isProtected;
 
     private EnemyMovement _movement;
     private EnemyDetectionHandler _detectionHandler;
@@ -20,6 +22,8 @@ public class Enemy : MonoBehaviour
 
     public void Kill()
     {
+        if (_isProtected) return;
+
         ParticleSystem ps = Instantiate(_deathEffect);
         ps.transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
         Destroy(gameObject);

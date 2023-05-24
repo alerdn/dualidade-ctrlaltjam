@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0) _thrownables.Value = 0;
-        _knives.Value = 0;
+        _thrownables.Value = 0;
+        _knives.Value = 3;
         _keys.Value = 0;
 
         _player.OnKarmaLevelIncreased += OnKarmaLevelIncreased;

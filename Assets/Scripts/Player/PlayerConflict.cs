@@ -9,6 +9,7 @@ public class PlayerConflict : MonoBehaviour
     public bool IsEnemyWithinReach => _enemy != null;
     public bool CanExecute = true;
 
+    [SerializeField] private SOInt _knivesSO;
     [SerializeField] private GameObject _interactionIcon;
     [SerializeField] private AudioSource _stabSfx;
 
@@ -21,6 +22,9 @@ public class PlayerConflict : MonoBehaviour
 
     private void Update()
     {
+        if (_knivesSO.Value <= 0) CanExecute = false;
+        if (_enemy != null && _enemy.IsProtected) CanExecute = false;
+
         if (!CanExecute)
         {
             _interactionIcon.SetActive(false);
@@ -35,6 +39,7 @@ public class PlayerConflict : MonoBehaviour
         {
             if (IsEnemyWithinReach)
             {
+                _knivesSO.Value--;
                 _enemy.Kill();
                 _stabSfx.Play();
                 OnDefeatEnemy?.Invoke();

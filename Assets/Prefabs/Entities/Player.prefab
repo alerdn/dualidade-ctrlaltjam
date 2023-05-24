@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanExecute: 0
+  _knivesSO: {fileID: 11400000, guid: b8521a2769d5788468f159428effccaa, type: 2}
   _interactionIcon: {fileID: 2721536853202257430}
   _stabSfx: {fileID: 3180700085219275935}
 --- !u!114 &8484734965611838540
@@ -540,7 +541,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 804929841
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 1460554859, guid: 42524690316552648a9f8b61ce70339e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -713,7 +714,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 804929841
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 1460554859, guid: 42524690316552648a9f8b61ce70339e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -973,7 +974,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 804929841
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: 447963099, guid: 42524690316552648a9f8b61ce70339e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
