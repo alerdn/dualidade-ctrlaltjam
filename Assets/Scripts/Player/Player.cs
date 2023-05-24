@@ -72,6 +72,12 @@ public class Player : MonoBehaviour
             _conflictComponent.CanExecute = false;
             _throwComponent.CanThrow = false;
         }
+        else if (_stealthComponent.IsHiddenBehind)
+        {
+            _movementComponent.CanMove = true;
+            _conflictComponent.CanExecute = false;
+            _throwComponent.CanThrow = true;
+        }
         else
         {
             _movementComponent.CanMove = true;

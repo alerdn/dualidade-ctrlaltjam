@@ -9,6 +9,7 @@ public class PlayerStealth : MonoBehaviour
     public event Action OnBehindObstacle;
 
     public bool IsHiddenInside { get; private set; }
+    public bool IsHiddenBehind { get; private set; }
 
     private bool _canHide;
     private Transform _hidingPlace;
@@ -39,6 +40,7 @@ public class PlayerStealth : MonoBehaviour
         if (collision.CompareTag("Obstacle"))
         {
             OnBehindObstacle?.Invoke();
+            IsHiddenBehind = true;
         }
         else if (collision.CompareTag("HidingPlace"))
         {
@@ -52,6 +54,7 @@ public class PlayerStealth : MonoBehaviour
         if (collision.CompareTag("Obstacle"))
         {
             OnBehindObstacle?.Invoke();
+            IsHiddenBehind = true;
         }
     }
 
@@ -79,6 +82,7 @@ public class PlayerStealth : MonoBehaviour
     private void LeaveHiding()
     {
         IsHiddenInside = false;
+        IsHiddenBehind = false;
         gameObject.layer = LayerMask.NameToLayer("Collidable");
         ToggleSprites(true);
     }
