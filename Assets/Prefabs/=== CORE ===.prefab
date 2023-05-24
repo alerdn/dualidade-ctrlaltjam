@@ -94,10 +94,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _thrownables: {fileID: 11400000, guid: f5841fa98a4a22746916dd7549afcd7c, type: 2}
+  _knives: {fileID: 11400000, guid: b8521a2769d5788468f159428effccaa, type: 2}
   _keys: {fileID: 11400000, guid: 194f34b83802860438be2b75e910444a, type: 2}
   _player: {fileID: 0}
   _enemiesContainer: {fileID: 0}
   _doorHandler: {fileID: 0}
+  _ductExit: {fileID: 0}
   _endScreen: {fileID: 0}
   _canvaAnimator: {fileID: 0}
 --- !u!1 &6566533932565739150
@@ -502,7 +504,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7
+    OrthographicSize: 9
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

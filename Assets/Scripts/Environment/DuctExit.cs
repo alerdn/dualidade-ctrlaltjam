@@ -26,7 +26,7 @@ public class DuctExit : MonoBehaviour
             }
         }
     }
-    
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         Player player = collision.GetComponent<Player>();

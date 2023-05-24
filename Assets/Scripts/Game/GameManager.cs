@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Collectables")]
     [SerializeField] private SOInt _thrownables;
+    [SerializeField] private SOInt _knives;
     [SerializeField] private SOInt _keys;
 
     [Header("Entities")]
@@ -35,7 +37,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        _thrownables.Value = 0;
+        if (SceneManager.GetActiveScene().buildIndex == 0) _thrownables.Value = 0;
+        _knives.Value = 0;
         _keys.Value = 0;
 
         _player.OnKarmaLevelIncreased += OnKarmaLevelIncreased;

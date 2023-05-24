@@ -9,13 +9,13 @@ public class DoorHandler : MonoBehaviour
 
     [SerializeField] private SOInt _keys;
     [SerializeField] private GameObject _interactionIcon;
-    [SerializeField] private Dialogue _dialogue;
+    [SerializeField] protected Dialogue _dialogue;
 
     private AudioSource _unlockSound;
     private bool _canOpen;
     private bool _inRange;
 
-    private void Start()
+    protected virtual void Start()
     {
         _unlockSound = GetComponent<AudioSource>();
         _interactionIcon.SetActive(false);
