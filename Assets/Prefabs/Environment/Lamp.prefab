@@ -198,9 +198,10 @@ GameObject:
   - component: {fileID: 1093477737498431213}
   - component: {fileID: 1093477737498431212}
   - component: {fileID: 5657232870704805540}
+  - component: {fileID: 3545143376239013817}
   m_Layer: 0
   m_Name: Light 2D
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,3 +315,31 @@ MonoBehaviour:
   _minInterval: 3
   _maxInterval: 10
   _flickType: 0
+--- !u!60 &3545143376239013817
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093477737498431218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -6.4841957, y: 13.968389}
+      - {x: 6.4974527, y: 13.975705}
+      - {x: 0.010756075, y: 0.022290349}

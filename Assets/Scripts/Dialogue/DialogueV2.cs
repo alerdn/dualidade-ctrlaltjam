@@ -15,7 +15,7 @@ public class DialogueV2 : MonoBehaviour
     [SerializeField] private TMP_Text _speakerField;
     [SerializeField] private Image _speakerImage;
     [SerializeField] private List<DialogueData> _dialogueDatas;
-    [SerializeField] private float timeBtwChars = 0.1f;
+    [SerializeField] private float timeBtwChars = 0.05f;
 
     private AudioSource _typeSound;
     private int _currentTextIndex;
@@ -46,7 +46,7 @@ public class DialogueV2 : MonoBehaviour
             _isTyping = false;
             return;
         }
-        _isTyping = true;  
+        _isTyping = true;
 
         /// Muda o speaker
         if (_currentTextIndex + 1 > _dialogueDatas[_currentDialogueIndex]._texts.Count - 1)
@@ -81,6 +81,7 @@ public class DialogueV2 : MonoBehaviour
             yield return new WaitForSeconds(timeBtwChars);
         }
 
+        _typeSound.Stop();
         _typingRoutine = null;
         _isTyping = false;
     }

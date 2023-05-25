@@ -5616,11 +5616,11 @@ PrefabInstance:
       objectReference: {fileID: 267401672}
     - target: {fileID: 6566533932824995394, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.05618
+      value: -43.0367
       objectReference: {fileID: 0}
     - target: {fileID: 6566533932824995394, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2574344
+      value: 4.2574215
       objectReference: {fileID: 0}
     - target: {fileID: 6566533932824995394, guid: 9baec2d86178d084196ca739d186ddde, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5863,7 +5863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6931035793580231809, guid: aa378a9296310fb44882a96ef585967b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6931035793580231811, guid: aa378a9296310fb44882a96ef585967b, type: 3}
       propertyPath: _act
@@ -5871,19 +5871,19 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: dd5908afc3225bb478d0aae60e0890f4, type: 2}
     - target: {fileID: 6931035794803062118, guid: aa378a9296310fb44882a96ef585967b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 579.87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6931035794803062118, guid: aa378a9296310fb44882a96ef585967b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 107.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6931035795434739686, guid: aa378a9296310fb44882a96ef585967b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 279.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6931035795434739686, guid: aa378a9296310fb44882a96ef585967b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 128.91
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa378a9296310fb44882a96ef585967b, type: 3}

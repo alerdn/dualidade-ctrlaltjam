@@ -10,6 +10,7 @@ TagManager:
   - Thrownable
   - Floor
   - NPC
+  - Light
   layers:
   - Default
   - TransparentFX

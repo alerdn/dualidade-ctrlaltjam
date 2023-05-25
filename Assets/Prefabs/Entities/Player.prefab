@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanThrow: 0
-  _thrownableItem: {fileID: 7168531498297136775, guid: 3922e50f149227e4eaef398c5c1a20fc, type: 3}
+  _thrownableItem: {fileID: -77946309901053743, guid: 3922e50f149227e4eaef398c5c1a20fc, type: 3}
   _interactionIcon: {fileID: 540372472486806007}
   _thrownablesSO: {fileID: 11400000, guid: f5841fa98a4a22746916dd7549afcd7c, type: 2}
   _direction: {x: 1, y: 1}

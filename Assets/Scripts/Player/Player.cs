@@ -11,9 +11,14 @@ public class Player : MonoBehaviour
 
     public bool IsProducingSound => _movementComponent.IsProducingSound;
     public bool IsRunning => _movementComponent.IsRunning;
+    public bool IsCrouching => _movementComponent.IsCrouching;
     public Transform Head => _head;
     public int KarmaLevel => _karmaComponent.KarmaLevel;
     public int EnemyDefeated => _karmaComponent.EnemyDefeated;
+    /// <summary>
+    /// Returns if the player is on light and is not crouching
+    /// </summary>
+    public bool IsInvisible => false;//!_stealthComponent.IsOnLight && _movementComponent.IsCrouching;
 
     [SerializeField] private Transform _head;
 
@@ -62,6 +67,15 @@ public class Player : MonoBehaviour
         }
 
         IsHiddenCheck();
+    }
+
+    void OnGUI()
+    {
+        GUILayout.BeginArea(new Rect(10f, 10f, Screen.width, Screen.height));
+
+        GUILayout.Label($"Player invisible: {IsInvisible}");
+
+        GUILayout.EndArea();
     }
 
     private void IsHiddenCheck()

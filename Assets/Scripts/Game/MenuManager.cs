@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Animator _canvaAnimator;
 
     [Header("Dialog Setup")]
-    [SerializeField] private Dialogue _dialog;
+    [SerializeField] private DialogueV2 _dialogue;
 
     [Header("Entities")]
     [SerializeField] private GameObject _char;
@@ -25,8 +25,8 @@ public class MenuManager : MonoBehaviour
         _playButton.onClick.AddListener(StartGame);
         _quitButton.onClick.AddListener(() => Application.Quit());
 
-        _dialog.gameObject.SetActive(false);
-        _dialog.OnDialogueFinished += () => StartCoroutine(CloseDialog());
+        _dialogue.gameObject.SetActive(false);
+        _dialogue.OnDialogueFinished += () => StartCoroutine(CloseDialog());
 
         if (Player.Instance != null)
         {
@@ -40,12 +40,12 @@ public class MenuManager : MonoBehaviour
         _quitButton.interactable = false;
 
         _canvaAnimator.SetTrigger("SlideOut");
-        _dialog.gameObject.SetActive(true);
+        _dialogue.gameObject.SetActive(true);
     }
 
     private IEnumerator CloseDialog()
     {
-        _dialog.gameObject.SetActive(false);
+        _dialogue.gameObject.SetActive(false);
         yield return _char.transform.DOMoveX(20f, 2f).SetRelative();
         _canvaAnimator.SetTrigger("FadeOut");
     }

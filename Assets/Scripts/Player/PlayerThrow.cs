@@ -6,15 +6,15 @@ public class PlayerThrow : MonoBehaviour
 {
     public bool CanThrow = true;
 
-    [SerializeField] private GameObject _thrownableItem;
+    [SerializeField] private Thrownable _thrownableItem;
     [SerializeField] private GameObject _interactionIcon;
 
     [Header("Setup")]
     [SerializeField] private SOInt _thrownablesSO;
     [SerializeField] private Vector2 _direction;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speed = 10f;
 
-    private GameObject _thrownable;
+    private Thrownable _thrownable;
     private bool _readyToThrow;
 
     private void Start()
@@ -90,25 +90,9 @@ public class PlayerThrow : MonoBehaviour
             {
                 _readyToThrow = false;
                 _thrownablesSO.Value--;
-                Rigidbody2D throwRB = _thrownable.GetComponent<Rigidbody2D>();
-
-                Vector2 delta = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                float _angle = Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg;
-                if (_angle < 0) _angle += 360;
-
-                _direction = RadianToVector2(_angle * Mathf.Deg2Rad);
-
-                _thrownable.transform.parent = null;
-                throwRB.gravityScale = 1;
-                throwRB.AddForce(_direction * _speed, ForceMode2D.Impulse);
-
+                _thrownable.Throw(_speed);
                 _thrownable = null;
             }
         }
-    }
-
-    private static Vector2 RadianToVector2(float radian)
-    {
-        return new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
     }
 }
