@@ -44,8 +44,17 @@ public class EnemyDetectionHandler : MonoBehaviour
     {
         if (_spottingPlayer != null)
         {
-            if (player.IsRunning || Vector2.Distance(transform.position, player.transform.position) < _minDistanceToAutoSpot) _spottingPlayer.Complete();
+            // When player is not visible, the auto detect doesn't trigger
+            if (player.IsInvisible) return;
+
+            if ((player.IsRunning && !player.IsCrouching) || Vector2.Distance(transform.position, player.transform.position) < _minDistanceToAutoSpot) _spottingPlayer.Complete();
             return;
+        }
+
+        if (player.IsInvisible)
+        {
+            // Only start to detect the player if is really close (player is hidden)
+            if (Vector2.Distance(transform.position, player.transform.position) > _minDistanceToAutoSpot) return;
         }
 
         OnNoticedSomething?.Invoke(player.transform);
