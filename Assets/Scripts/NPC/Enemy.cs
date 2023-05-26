@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public event Action OnKilled;
+
     public bool IsProtected => _isProtected;
     public EnemyDetectionHandler DetectionHandler => _detectionHandler;
 
@@ -26,6 +29,7 @@ public class Enemy : MonoBehaviour
 
         ParticleSystem ps = Instantiate(_deathEffect);
         ps.transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
+        OnKilled?.Invoke();
         Destroy(gameObject);
     }
 

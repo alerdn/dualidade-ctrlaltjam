@@ -598,7 +598,7 @@ TextureImporter:
         width: 108
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -606,6 +606,27 @@ TextureImporter:
       bones: []
       spriteID: 142160865a36eb04caf7260361044356
       internalID: 1516089986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lock
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 308
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cc469d720b11243bb319ffbab7bafe
+      internalID: -1274574308
       vertices: []
       indices: 
       edges: []
@@ -637,6 +658,7 @@ TextureImporter:
       phone: 1778068498
       garrafa_2: 1980570927
       garrafa_3: 622560317
+      lock: -1274574308
       mouse_icon: -1660344686
       crate: -1890073997
       locked_door: 876203519

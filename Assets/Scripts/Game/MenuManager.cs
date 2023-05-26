@@ -14,6 +14,10 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Image _foreground;
     [SerializeField] private Animator _canvaAnimator;
 
+    [Header("Points")]
+    [SerializeField] private SOInt _assassinPointsSO;
+    [SerializeField] private SOInt _stealthPointsSO;
+
     [Header("Dialog Setup")]
     [SerializeField] private DialogueV2 _dialogue;
 
@@ -22,6 +26,9 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+        _assassinPointsSO.Value = 0;
+        _stealthPointsSO.Value = 0;
+
         _playButton.onClick.AddListener(StartGame);
         _quitButton.onClick.AddListener(() => Application.Quit());
 

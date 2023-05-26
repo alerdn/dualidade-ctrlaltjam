@@ -96,6 +96,8 @@ MonoBehaviour:
   _thrownables: {fileID: 11400000, guid: f5841fa98a4a22746916dd7549afcd7c, type: 2}
   _knives: {fileID: 11400000, guid: b8521a2769d5788468f159428effccaa, type: 2}
   _keys: {fileID: 11400000, guid: 194f34b83802860438be2b75e910444a, type: 2}
+  _assassinPoints: {fileID: 11400000, guid: 6d45355d5d262884e8eea8f92f2acc71, type: 2}
+  _stealthPoints: {fileID: 11400000, guid: e750d4105d3573a41a02f13091a0dc7f, type: 2}
   _player: {fileID: 0}
   _enemiesContainer: {fileID: 0}
   _doorHandler: {fileID: 0}

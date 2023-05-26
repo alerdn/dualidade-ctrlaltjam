@@ -11,11 +11,22 @@ public class PauseScreen : MonoBehaviour
     [SerializeField] private Button _quitButton;
     [SerializeField] private GameObject _screen;
 
+    [Header("Nav")]
+    [SerializeField] private List<ActionButton> _actions;
+    [SerializeField] private List<GameObject> _screens;
+
+
     private void Start()
     {
         _screen.SetActive(false);
         _continueButton.onClick.AddListener(Continue);
         _quitButton.onClick.AddListener(QuitToMenu);
+
+        for (int i = 0; i < _actions.Count; i++)
+        {
+            _actions[i].Init(i);
+            _actions[i].OnClick += SelectScreen;
+        }
     }
 
     private void Update()
@@ -24,12 +35,35 @@ public class PauseScreen : MonoBehaviour
         {
             if (!_screen.activeInHierarchy)
             {
-                Time.timeScale = 0f;
-                _screen.SetActive(true);
+                OpenMenu();
             }
             else
             {
                 Continue();
+            }
+        }
+    }
+
+    private void OpenMenu()
+    {
+        Time.timeScale = 0f;
+        _screen.SetActive(true);
+        SelectScreen(0);
+    }
+
+    private void SelectScreen(int i)
+    {
+        for (int j = 0; j < _screens.Count; j++)
+        {
+            if (i == j)
+            {
+                _screens[j].SetActive(true);
+                _actions[j].Select();
+            }
+            else
+            {
+                _screens[j].SetActive(false);
+                _actions[j].Deselect();
             }
         }
     }

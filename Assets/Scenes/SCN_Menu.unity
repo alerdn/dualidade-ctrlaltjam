@@ -5459,6 +5459,8 @@ MonoBehaviour:
   _quitButton: {fileID: 1499974559}
   _foreground: {fileID: 397248120}
   _canvaAnimator: {fileID: 1599122498}
+  _assassinPointsSO: {fileID: 11400000, guid: 6d45355d5d262884e8eea8f92f2acc71, type: 2}
+  _stealthPointsSO: {fileID: 11400000, guid: e750d4105d3573a41a02f13091a0dc7f, type: 2}
   _dialogue: {fileID: 977410363}
   _char: {fileID: 1680715709}
 --- !u!1 &1599122493

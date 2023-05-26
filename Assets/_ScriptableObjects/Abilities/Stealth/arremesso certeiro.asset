@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be108f456ead57144817aea9a3f249e5, type: 3}
+  m_Name: arremesso certeiro
+  m_EditorClassIdentifier: 
+  Title: arremesso certeiro
+  Icon: {fileID: 21300000, guid: 61ac40b257b3a994f841856ad38b2b6b, type: 3}
+  Description: "seu arremesso foi aperfei\xE7oado com a pr\xE1tica. Voc\xEA pode
+    quebrar lampadas e se aproveitar das sombras"
+  Cost: 75
+  Type: 1
