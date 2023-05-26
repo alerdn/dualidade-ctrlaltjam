@@ -13,7 +13,7 @@ public class PlayerThrow : MonoBehaviour
     [SerializeField] private SOInt _thrownablesSO;
     [SerializeField] private Vector2 _direction;
     [SerializeField] private float _speed = 10f;
-
+    [SerializeField]
     private Thrownable _thrownable;
     private bool _readyToThrow;
 
@@ -26,9 +26,7 @@ public class PlayerThrow : MonoBehaviour
     {
         if (!CanThrow)
         {
-            Cursor.visible = true;
-            _interactionIcon.SetActive(false);
-            if (_thrownable != null) Destroy(_thrownable);
+            ResetThrow();
             return;
         }
 
@@ -38,6 +36,18 @@ public class PlayerThrow : MonoBehaviour
         if (_thrownable != null) _thrownable.transform.position = new Vector2(transform.position.x - 1, transform.position.y + 1);
 
         ThrowItem();
+    }
+
+    public void ResetThrow()
+    {
+        Cursor.visible = true;
+        _interactionIcon.SetActive(false);
+        _readyToThrow = false;
+        if (_thrownable != null)
+        {
+            Destroy(_thrownable.gameObject);
+            _thrownable = null;
+        }
     }
 
     private void HandleThrownMode()
@@ -58,7 +68,8 @@ public class PlayerThrow : MonoBehaviour
             {
                 Cursor.visible = true;
                 _interactionIcon.SetActive(false);
-                Destroy(_thrownable);
+                Destroy(_thrownable.gameObject);
+                _thrownable = null;
             }
         }
     }
@@ -86,7 +97,7 @@ public class PlayerThrow : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (_readyToThrow)
+            if (_readyToThrow && Time.timeScale == 1f)
             {
                 _readyToThrow = false;
                 _thrownablesSO.Value--;

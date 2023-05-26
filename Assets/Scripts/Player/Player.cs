@@ -40,10 +40,7 @@ public class Player : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-    }
 
-    private void Start()
-    {
         _movementComponent = GetComponent<PlayerMovement>();
         _stealthComponent = GetComponent<PlayerStealth>();
         _conflictComponent = GetComponent<PlayerConflict>();
@@ -69,14 +66,20 @@ public class Player : MonoBehaviour
         IsHiddenCheck();
     }
 
-    void OnGUI()
+    public void ResetPlayer()
     {
-        GUILayout.BeginArea(new Rect(10f, 10f, Screen.width, Screen.height));
-
-        GUILayout.Label($"Player invisible: {IsInvisible}");
-
-        GUILayout.EndArea();
+        _movementComponent.ResetMovement();
+        _throwComponent.ResetThrow();
     }
+
+    //void OnGUI()
+    //{
+    //    GUILayout.BeginArea(new Rect(10f, 10f, Screen.width, Screen.height));
+
+    //    GUILayout.Label($"Player invisible: {IsInvisible}");
+
+    //    GUILayout.EndArea();
+    //}
 
     private void IsHiddenCheck()
     {

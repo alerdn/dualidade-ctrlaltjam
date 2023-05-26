@@ -43,6 +43,11 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = _movementDirection;
     }
 
+    public void ResetMovement()
+    {
+        if (IsCrouching) ToggleCrouch();
+    }
+
     private void HandleMovement()
     {
         HandleRun();
@@ -122,9 +127,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            _isCrouching = !_isCrouching;
-            _animator.SetTrigger("Crouch");
+            ToggleCrouch();
         }
+    }
+
+    private void ToggleCrouch()
+    {
+        _isCrouching = !_isCrouching;
+        _animator.SetTrigger("Crouch");
     }
 
     private void HandleProducingSound()

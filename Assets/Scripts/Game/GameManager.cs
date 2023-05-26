@@ -4,10 +4,8 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Static<GameManager>
 {
-    public static GameManager Instance;
-
     public bool IsGameOver => _isGameOver;
     public bool IsPlayerLocked { get; private set; }
 
@@ -21,7 +19,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SOInt _stealthPoints;
 
     [Header("Entities")]
-    [SerializeField] private Player _player;
     [SerializeField] private GameObject _enemiesContainer;
     [SerializeField] private DoorHandler _doorHandler;
     [SerializeField] private DuctExit _ductExit;
@@ -34,11 +31,6 @@ public class GameManager : MonoBehaviour
     private int _maxEnemyCount;
     private int _currentEnemyCount;
     private bool _isGameOver;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     private void Start()
     {
@@ -57,6 +49,8 @@ public class GameManager : MonoBehaviour
 
         if (_doorHandler) _doorHandler.OnAreaLeave += OnAreaLeave;
         if (_ductExit) _ductExit.OnAreaLeave += OnAreaLeave;
+
+        Player.Instance.ResetPlayer();
     }
 
     private void UpdateKillCount()
