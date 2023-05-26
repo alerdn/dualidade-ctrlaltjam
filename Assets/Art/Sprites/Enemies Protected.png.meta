@@ -786,6 +786,27 @@ TextureImporter:
         boneIndex[1]: 0
         boneIndex[2]: 0
         boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemies Protected_full
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 24
+        width: 169
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f402ce6e1ef494c8ee32f14159455b
+      internalID: -462715443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -799,6 +820,7 @@ TextureImporter:
     nameFileIdTable:
       enemy_protected_side: 58696724
       enemy_protected_leg: -643901955
+      Enemies Protected_full: -462715443
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

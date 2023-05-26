@@ -98,7 +98,6 @@ MonoBehaviour:
   _keys: {fileID: 11400000, guid: 194f34b83802860438be2b75e910444a, type: 2}
   _assassinPoints: {fileID: 11400000, guid: 6d45355d5d262884e8eea8f92f2acc71, type: 2}
   _stealthPoints: {fileID: 11400000, guid: e750d4105d3573a41a02f13091a0dc7f, type: 2}
-  _player: {fileID: 0}
   _enemiesContainer: {fileID: 0}
   _doorHandler: {fileID: 0}
   _ductExit: {fileID: 0}
@@ -271,13 +270,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
+  m_IgnoreTimeScale: 1
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []

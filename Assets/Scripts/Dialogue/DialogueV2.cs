@@ -5,11 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using Cinemachine;
 
 public class DialogueV2 : MonoBehaviour
 {
     public event Action OnDialogueFinished;
 
+    [Header("UI")]
     [SerializeField] private Button _nextButton;
     [SerializeField] private TMP_Text _textField;
     [SerializeField] private TMP_Text _speakerField;

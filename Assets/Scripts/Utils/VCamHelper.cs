@@ -9,7 +9,6 @@ public class VCamHelper : MonoBehaviour
 
     private void Start()
     {
-
         _vcam = GetComponent<CinemachineVirtualCamera>();
         _vcam.Follow = Player.Instance != null ? Player.Instance.transform : null;
     }

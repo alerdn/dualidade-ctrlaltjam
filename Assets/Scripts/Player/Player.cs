@@ -65,10 +65,8 @@ public class Player : MonoBehaviour
             return;
         }
 
+        IsReadyToThrowCheck();
         IsHiddenCheck();
-
-        /// Player can only execute if is not holding a bottle
-        _conflictComponent.CanExecute = !_throwComponent.IsReadyToThrow;
     }
 
     public void ResetPlayer()
@@ -85,6 +83,12 @@ public class Player : MonoBehaviour
 
     //    GUILayout.EndArea();
     //}
+
+    private void IsReadyToThrowCheck()
+    {
+        /// Player can only execute if is not holding a bottle
+        if (_throwComponent.IsReadyToThrow) _conflictComponent.CanExecute = false;
+    }
 
     private void IsHiddenCheck()
     {

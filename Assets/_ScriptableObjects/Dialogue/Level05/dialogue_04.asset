@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
   m_Name: dialogue_04
   m_EditorClassIdentifier: 
-  speakerName: Frank
-  speakerSprite: {fileID: 135687347, guid: 168168ab6f5101341a7bb116bd553be3, type: 3}
+  speakerName: owly
+  speakerSprite: {fileID: 1654801085, guid: 42524690316552648a9f8b61ce70339e, type: 3}
   _texts:
-  - "Eu falaria mais baixo se fosse voc\xEA, o Chefe n\xE3o gosta nada de reclam\xF5es"
-  - "J\xE1 j\xE1 acaba nosso turno, s\xF3 precisamos fazer aquela maldita abrir a
-    boca"
+  - "(Uma coruja se oferecer? Do que eles est\xE3o falando?)"
