@@ -539,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3531967573818186241, guid: ddf8c47803cd76a4bbe0c0ea05029a07, type: 3}
       propertyPath: timeBtwChars
-      value: 0.01
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 3531967573818186241, guid: ddf8c47803cd76a4bbe0c0ea05029a07, type: 3}
       propertyPath: _texts.Array.size

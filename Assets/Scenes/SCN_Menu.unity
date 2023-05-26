@@ -3290,7 +3290,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22fd88179abb8b942b560bbcc13298b2, type: 2}
   - {fileID: 11400000, guid: 1f5e6634cdba32e4fb480de3482bd4ac, type: 2}
   - {fileID: 11400000, guid: 50eba006ec0c29e4cb20f10185e89305, type: 2}
-  timeBtwChars: 0.01
+  timeBtwChars: 0.025
   _freezeTimeWhenOpen: 0
 --- !u!1 &1026608831
 GameObject:

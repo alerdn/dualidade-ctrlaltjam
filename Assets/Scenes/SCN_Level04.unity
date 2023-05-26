@@ -940,6 +940,14 @@ PrefabInstance:
       propertyPath: _pathTransforms.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1601009974213854166, guid: c82a0ecfe28e42849bcc9a88f5343457, type: 3}
+      propertyPath: m_Size.x
+      value: 7.2341127
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601009974213854166, guid: c82a0ecfe28e42849bcc9a88f5343457, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.1933875
+      objectReference: {fileID: 0}
     - target: {fileID: 5426939892196275373, guid: c82a0ecfe28e42849bcc9a88f5343457, type: 3}
       propertyPath: m_IsActive
       value: 0

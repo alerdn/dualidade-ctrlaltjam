@@ -1345,7 +1345,8 @@ MonoBehaviour:
   _speakerImage: {fileID: 6046609857649608128}
   _dialogueDatas:
   - {fileID: 0}
-  timeBtwChars: 0.01
+  timeBtwChars: 0.025
+  _freezeTimeWhenOpen: 1
 --- !u!224 &6046609858205904680 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3531967573818186240, guid: ddf8c47803cd76a4bbe0c0ea05029a07, type: 3}

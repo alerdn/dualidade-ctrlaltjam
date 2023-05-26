@@ -319,7 +319,7 @@ MonoBehaviour:
   - "Owly, voc\xEA est\xE1 bem? Soube que est\xE1 entrando na cidade dos ratos. Tenha
     cuidado por favor, voc\xEA n\xE3o \xE9 nada bem vinda aqui."
   - "Eu tenho not\xEDcia da Lily"
-  timeBtwChars: 0.05
+  timeBtwChars: 0.025
 --- !u!82 &3531967573818186242
 AudioSource:
   m_ObjectHideFlags: 0
