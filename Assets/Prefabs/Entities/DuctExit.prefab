@@ -135,11 +135,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 720914648586291128, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
       propertyPath: m_text
-      value: "ESPA\xC7O"
+      value: e
       objectReference: {fileID: 0}
     - target: {fileID: 720914648586291128, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
       propertyPath: m_fontSize
-      value: 0.15
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 720914648633895378, guid: d425c0a8c003b6b4393535158bb25ee1, type: 3}
       propertyPath: m_PresetInfoIsWorld

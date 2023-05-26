@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerThrow : MonoBehaviour
 {
     public bool CanThrow = true;
+    public bool IsReadyToThrow => _readyToThrow;
 
     [SerializeField] private Thrownable _thrownableItem;
     [SerializeField] private GameObject _interactionIcon;
@@ -13,7 +14,7 @@ public class PlayerThrow : MonoBehaviour
     [SerializeField] private SOInt _thrownablesSO;
     [SerializeField] private Vector2 _direction;
     [SerializeField] private float _speed = 10f;
-    [SerializeField]
+
     private Thrownable _thrownable;
     private bool _readyToThrow;
 

@@ -44,9 +44,13 @@ public class DoorHandler : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player)
         {
-            _interactionIcon.SetActive(true);
-            _canOpen = _keys.Value > 0;
-            _inRange = true;
+            if (!player.IsInteracting)
+            {
+                player.IsInteracting = true;
+                _interactionIcon.SetActive(true);
+                _canOpen = _keys.Value > 0;
+                _inRange = true;
+            }
         }
     }
 
@@ -55,6 +59,7 @@ public class DoorHandler : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player)
         {
+            player.IsInteracting = false;
             _interactionIcon.SetActive(false);
             _canOpen = false;
             _inRange = false;

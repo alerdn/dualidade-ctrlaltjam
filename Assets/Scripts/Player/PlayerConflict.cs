@@ -10,15 +10,9 @@ public class PlayerConflict : MonoBehaviour
     public bool CanExecute = true;
 
     [SerializeField] private SOInt _knivesSO;
-    [SerializeField] private GameObject _interactionIcon;
     [SerializeField] private AudioSource _stabSfx;
 
     private Enemy _enemy;
-
-    private void Start()
-    {
-        _interactionIcon.SetActive(false);
-    }
 
     private void Update()
     {
@@ -27,13 +21,9 @@ public class PlayerConflict : MonoBehaviour
 
         if (!CanExecute)
         {
-            _interactionIcon.SetActive(false);
             _enemy = null;
             return;
         }
-
-        /// Ajuste técnico para não fazer o icone girar
-        if (_interactionIcon.activeInHierarchy) _interactionIcon.transform.rotation = Quaternion.identity;
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -47,23 +37,24 @@ public class PlayerConflict : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy)
         {
             if (!CanExecute) return;
 
-            _interactionIcon.SetActive(true);
-            _enemy = collision.GetComponent<Enemy>();
+            _enemy = enemy;
+            _enemy.ShowKillIcon();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Enemy enemy = collision.gameObject.GetComponentInChildren<Enemy>();
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy)
         {
-            _interactionIcon.SetActive(false);
+            enemy.HideKillIcon();
             _enemy = null;
         }
     }

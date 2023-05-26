@@ -16,6 +16,7 @@ public class DialogueV2 : MonoBehaviour
     [SerializeField] private Image _speakerImage;
     [SerializeField] private List<DialogueData> _dialogueDatas;
     [SerializeField] private float timeBtwChars = 0.05f;
+    [SerializeField] private bool _freezeTimeWhenOpen = true;
 
     private AudioSource _typeSound;
     private int _currentTextIndex;
@@ -25,7 +26,7 @@ public class DialogueV2 : MonoBehaviour
 
     private void OnEnable()
     {
-        Time.timeScale = 0;
+        if (_freezeTimeWhenOpen) Time.timeScale = 0;
     }
 
     private void OnDisable()

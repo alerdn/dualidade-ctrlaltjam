@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     public event Action<int> OnKarmaLevelIncreased;
 
+    public bool IsInteracting;
+
     public bool IsProducingSound => _movementComponent.IsProducingSound;
     public bool IsRunning => _movementComponent.IsRunning;
     public bool IsCrouching => _movementComponent.IsCrouching;
@@ -64,6 +66,9 @@ public class Player : MonoBehaviour
         }
 
         IsHiddenCheck();
+
+        /// Player can only execute if is not holding a bottle
+        _conflictComponent.CanExecute = !_throwComponent.IsReadyToThrow;
     }
 
     public void ResetPlayer()

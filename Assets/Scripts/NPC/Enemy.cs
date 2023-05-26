@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,6 +11,13 @@ public class Enemy : MonoBehaviour
     public bool IsProtected => _isProtected;
     public EnemyDetectionHandler DetectionHandler => _detectionHandler;
 
+    [Header("Interaction")]
+    [SerializeField] private GameObject _interactionObject;
+    [SerializeField] private Image _interactionIcon;
+    [SerializeField] private Sprite _canKillSprite;
+    [SerializeField] private Sprite _cannotKillSprite;
+
+    [Space]
     [SerializeField] private ParticleSystem _deathEffect;
     [SerializeField] private bool _isProtected;
 
@@ -21,6 +29,28 @@ public class Enemy : MonoBehaviour
         _movement = GetComponent<EnemyMovement>();
         _detectionHandler = GetComponentInChildren<EnemyDetectionHandler>();
         _detectionHandler.OnNoticedSomething += OnNoticedSomething;
+    }
+
+    private void Start()
+    {
+        HideKillIcon();
+    }
+
+    private void Update()
+    {
+        /// Ajuste técnico para não fazer o icone girar
+        if (_interactionObject.activeInHierarchy) _interactionObject.transform.rotation = Quaternion.identity;
+    }
+
+    public void ShowKillIcon()
+    {
+        _interactionIcon.sprite = IsProtected ? _cannotKillSprite : _canKillSprite;
+        _interactionObject.SetActive(true);
+    }
+
+    public void HideKillIcon()
+    {
+        _interactionObject.SetActive(false);
     }
 
     public void Kill()

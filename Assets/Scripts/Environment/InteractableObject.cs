@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    public bool CanInteract { get; private set; }
+
     [SerializeField] private GameObject _interactionIcon;
 
     private void Start()
@@ -11,15 +13,26 @@ public class InteractableObject : MonoBehaviour
         _interactionIcon.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.GetComponent<Player>())
-            _interactionIcon.SetActive(true);
+        {
+            if (!Player.Instance.IsInteracting)
+            {
+                CanInteract = true;
+                Player.Instance.IsInteracting = true;
+                _interactionIcon.SetActive(true);
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponent<Player>())
+        {
+            CanInteract = true;
+            Player.Instance.IsInteracting = false;
             _interactionIcon.SetActive(false);
+        }
     }
 }
