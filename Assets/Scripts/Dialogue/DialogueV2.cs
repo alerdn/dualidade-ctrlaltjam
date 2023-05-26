@@ -23,10 +23,20 @@ public class DialogueV2 : MonoBehaviour
     private bool _isTyping;
     private Coroutine _typingRoutine;
 
+    private void OnEnable()
+    {
+        Time.timeScale = 0;
+    }
+
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
+    }
+
     private void Start()
     {
         _typeSound = GetComponent<AudioSource>();
-        transform.DOScale(Vector3.zero, .5f).From();
+        transform.DOScale(Vector3.zero, .5f).From().SetUpdate(true);
 
         _nextButton.onClick.AddListener(NextConversation);
         _currentDialogueIndex = 0;
@@ -59,7 +69,7 @@ public class DialogueV2 : MonoBehaviour
                 return;
             }
 
-            _speakerImage.transform.DOScale(0f, .25f).From();
+            _speakerImage.transform.DOScale(0f, .25f).From().SetUpdate(true);
             _currentDialogueIndex++;
             _currentTextIndex = -1;
         }
@@ -78,7 +88,7 @@ public class DialogueV2 : MonoBehaviour
         foreach (char c in _dialogueDatas[_currentDialogueIndex]._texts[_currentTextIndex])
         {
             _textField.text += c;
-            yield return new WaitForSeconds(timeBtwChars);
+            yield return new WaitForSecondsRealtime(timeBtwChars);
         }
 
         _typeSound.Stop();

@@ -15,6 +15,7 @@ public class PauseScreen : MonoBehaviour
     [SerializeField] private List<ActionButton> _actions;
     [SerializeField] private List<GameObject> _screens;
 
+    private float _previousTimeScale = 1f;
 
     private void Start()
     {
@@ -46,6 +47,7 @@ public class PauseScreen : MonoBehaviour
 
     private void OpenMenu()
     {
+        _previousTimeScale = Time.timeScale;
         Time.timeScale = 0f;
         _screen.SetActive(true);
         SelectScreen(0);
@@ -70,7 +72,7 @@ public class PauseScreen : MonoBehaviour
 
     private void Continue()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = _previousTimeScale;
         _screen.SetActive(false);
     }
 
