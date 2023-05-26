@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -60,11 +61,16 @@ public class GameManager : Static<GameManager>
 
     private void OnAreaLeave()
     {
-        _assassinPoints.Value += _currentEnemyCount * 10;
-        _stealthPoints.Value += (_maxEnemyCount - _currentEnemyCount) * 10;
-
-        _canvaAnimator.SetTrigger("LeaveArea");
         IsPlayerLocked = true;
+
+        int newAssassinPoints = _currentEnemyCount * 10;
+        int newStealthPoints = (_maxEnemyCount - _currentEnemyCount) * 10;
+
+        _assassinPoints.Value += newAssassinPoints;
+        _stealthPoints.Value += newStealthPoints;
+
+        PopUpManager.Instance.ShowPoints(newAssassinPoints, newStealthPoints);
+        _canvaAnimator.SetTrigger("LeaveArea");
     }
 
     private void GameOver()
