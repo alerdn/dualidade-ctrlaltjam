@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 1357242547121150579}
   - component: {fileID: 8484734965611838540}
   - component: {fileID: 5280930746885632480}
+  - component: {fileID: 7793567162020462401}
   - component: {fileID: 1478073938451791434}
   m_Layer: 3
   m_Name: Player
@@ -201,7 +202,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanExecute: 0
   _knivesSO: {fileID: 11400000, guid: b8521a2769d5788468f159428effccaa, type: 2}
-  _interactionIcon: {fileID: 0}
   _stabSfx: {fileID: 3180700085219275935}
 --- !u!114 &8484734965611838540
 MonoBehaviour:
@@ -241,6 +241,27 @@ MonoBehaviour:
   _thrownablesSO: {fileID: 11400000, guid: f5841fa98a4a22746916dd7549afcd7c, type: 2}
   _direction: {x: 1, y: 1}
   _speed: 10
+--- !u!114 &7793567162020462401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656576120392271770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83cddb2e57ef0c419ac3d20107cf7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assassinPoints: {fileID: 11400000, guid: 6d45355d5d262884e8eea8f92f2acc71, type: 2}
+  _stealthPoints: {fileID: 11400000, guid: e750d4105d3573a41a02f13091a0dc7f, type: 2}
+  _abilities:
+  - {fileID: 11400000, guid: e778e34b1717bde488ba0e645203950d, type: 2}
+  - {fileID: 11400000, guid: 5390aa63c6abdf14b99827e73d77b626, type: 2}
+  - {fileID: 11400000, guid: 6deb0037194e7bc4684eec29fde74565, type: 2}
+  - {fileID: 11400000, guid: 2c816af0b856ba04f832d84b8d62522f, type: 2}
+  - {fileID: 11400000, guid: 3ac800e67358350428f7f7d985add421, type: 2}
+  - {fileID: 11400000, guid: b332c3d6ea5efe0469761c28e518d00a, type: 2}
 --- !u!61 &1478073938451791434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -497,8 +518,8 @@ MonoBehaviour:
   - {fileID: 2656576122202325769}
   - {fileID: 2656576120608177596}
   m_Bounds:
-    m_Center: {x: -0.040105283, y: -0.021488905, z: 0}
-    m_Extent: {x: 0.25989473, y: 1.036489, z: 0}
+    m_Center: {x: -0.040104777, y: -0.021489024, z: 0}
+    m_Extent: {x: 0.25989538, y: 1.036489, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -670,8 +691,8 @@ MonoBehaviour:
   - {fileID: 2656576120735346705}
   - {fileID: 2656576122359941326}
   m_Bounds:
-    m_Center: {x: -0.040105253, y: -0.021488905, z: 0}
-    m_Extent: {x: 0.25989473, y: 1.036489, z: 0}
+    m_Center: {x: -0.040104777, y: -0.021489024, z: 0}
+    m_Extent: {x: 0.25989538, y: 1.036489, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -930,7 +951,7 @@ MonoBehaviour:
   - {fileID: 2656576121039861609}
   - {fileID: 2656576120640266293}
   m_Bounds:
-    m_Center: {x: 0.000000059604645, y: -0.0031850338, z: 0}
+    m_Center: {x: 0.00000011920929, y: -0.0031850338, z: 0}
     m_Extent: {x: 0.71000016, y: 1.7618153, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1754b8d4f1ccf4b836a48d7bca2571, type: 3}
   m_Name: AssassinPoints
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 60

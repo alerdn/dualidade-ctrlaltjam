@@ -11,6 +11,13 @@ public class Ability : ScriptableObject
         STEALTH
     }
 
+    public enum AbilityState
+    {
+        LOCKED,
+        UNLOCKED,
+    }
+
+    public AbilityState State = AbilityState.LOCKED; 
     public string Title;
     public Sprite Icon;
     public string Description;
