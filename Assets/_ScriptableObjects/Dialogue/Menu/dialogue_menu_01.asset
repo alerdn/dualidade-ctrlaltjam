@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
   m_Name: dialogue_menu_01
   m_EditorClassIdentifier: 
-  speakerName: sally
+  speakerName: com. sally
   speakerSprite: {fileID: 1778068498, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
   _texts:
   - "Agente Owly, como voc\xEA est\xE1? Soube que est\xE1 entrando em Ratown"

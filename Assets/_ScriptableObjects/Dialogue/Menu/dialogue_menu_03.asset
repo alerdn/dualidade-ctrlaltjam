@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
   m_Name: dialogue_menu_03
   m_EditorClassIdentifier: 
-  speakerName: sally
+  speakerName: com. sally
   speakerSprite: {fileID: 1778068498, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
   _texts:
-  - "A intelig\xEAncia me informou que a Laila pode ter sido visto em um dos galp\xF5es
+  - "A intelig\xEAncia me informou que a Laila pode ter sido vista em um dos galp\xF5es
     do porto"
   - "N\xE3o sabemos se ela est\xE1 ferida ou n\xE3o. Prossiga com cautela e traga
     nossa agente para casa"
