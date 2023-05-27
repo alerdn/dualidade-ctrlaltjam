@@ -11,7 +11,18 @@ public class Player : MonoBehaviour
 
     public bool IsInteracting;
 
-    public bool IsProducingSound => _movementComponent.IsProducingSound;
+    public bool IsProducingSound
+    {
+        get
+        {
+            if (_abilityComponent.IsAbilityUnlocked(AbilityID.PASSOS_DE_PLUMA))
+            {
+                return false;
+            }
+            return _movementComponent.IsProducingSound;
+        }
+    }
+
     public bool IsRunning => _movementComponent.IsRunning;
     public bool IsCrouching => _movementComponent.IsCrouching;
     public Transform Head => _head;
@@ -29,6 +40,7 @@ public class Player : MonoBehaviour
     private PlayerConflict _conflictComponent;
     private PlayerKarma _karmaComponent;
     private PlayerThrow _throwComponent;
+    private PlayerAbility _abilityComponent;
 
     private void Awake()
     {
@@ -48,6 +60,7 @@ public class Player : MonoBehaviour
         _conflictComponent = GetComponent<PlayerConflict>();
         _karmaComponent = GetComponent<PlayerKarma>();
         _throwComponent = GetComponent<PlayerThrow>();
+        _abilityComponent = GetComponent<PlayerAbility>();
 
         _stealthComponent.OnBehindObstacle += TakeCover;
         _conflictComponent.OnDefeatEnemy += OnDefeatEnemy;
@@ -75,14 +88,15 @@ public class Player : MonoBehaviour
         _throwComponent.ResetThrow();
     }
 
-    //void OnGUI()
-    //{
-    //    GUILayout.BeginArea(new Rect(10f, 10f, Screen.width, Screen.height));
+    void OnGUI()
+    {
+        GUILayout.BeginArea(new Rect(10f, 10f, Screen.width, Screen.height));
 
-    //    GUILayout.Label($"Player invisible: {IsInvisible}");
+        GUILayout.Label($"Player invisible: {IsInvisible}");
+        GUILayout.Label($"Player producing sound: {IsProducingSound}");
 
-    //    GUILayout.EndArea();
-    //}
+        GUILayout.EndArea();
+    }
 
     private void IsReadyToThrowCheck()
     {

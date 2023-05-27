@@ -25,16 +25,31 @@ public class PlayerAbility : MonoBehaviour
 
     private void Update()
     {
+        CheckAbilityUnlock();
+        HandleAbilities();
+    }
+    
+    public Ability GetAbility(AbilityID id) => _abilities.Find((ability) => ability.ID == id);
+
+    public bool IsAbilityUnlocked(AbilityID id) => GetAbility(id).State == Ability.AbilityState.UNLOCKED;
+
+    private void HandleAbilities()
+    {
+
+    }
+
+    private void CheckAbilityUnlock()
+    {
         _abilities.ForEach((ability) =>
         {
-            if (ability.Type == Ability.AbilityType.STEALTH)
+            if (ability.Type == AbilityType.STEALTH)
             {
                 if (ability.Cost <= _stealthPoints.Value)
                 {
                     ability.State = Ability.AbilityState.UNLOCKED;
                 }
             }
-            else if (ability.Type == Ability.AbilityType.ASSASSIN)
+            else if (ability.Type == AbilityType.ASSASSIN)
             {
                 if (ability.Cost <= _assassinPoints.Value)
                 {
@@ -43,4 +58,5 @@ public class PlayerAbility : MonoBehaviour
             }
         });
     }
+
 }

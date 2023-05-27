@@ -55,7 +55,7 @@ public class AbilityScreen : MonoBehaviour
         {
             if (ability.AbilityData == null) return;
 
-            if (ability.AbilityData.Type == Ability.AbilityType.STEALTH)
+            if (ability.AbilityData.Type == AbilityType.STEALTH)
             {
                 if (ability.AbilityData.State == Ability.AbilityState.UNLOCKED) ability.SetUnlockColor();
             }
@@ -72,7 +72,7 @@ public class AbilityScreen : MonoBehaviour
         {
             if (ability.AbilityData == null) return;
 
-            if (ability.AbilityData.Type == Ability.AbilityType.ASSASSIN)
+            if (ability.AbilityData.Type == AbilityType.ASSASSIN)
             {
                 if (ability.AbilityData.State == Ability.AbilityState.UNLOCKED) ability.SetUnlockColor();
                 else ability.SetLockColor();
