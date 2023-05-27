@@ -31,7 +31,17 @@ public class Player : MonoBehaviour
     /// <summary>
     /// Returns if the player is on light and is not crouching
     /// </summary>
-    public bool IsInvisible => false;//!_stealthComponent.IsOnLight && _movementComponent.IsCrouching;
+    public bool IsInvisible
+    {
+        get
+        {
+            if (_abilityComponent.IsAbilityUnlocked(AbilityID.VEU_DA_NOITE))
+            {
+                return !_stealthComponent.IsOnLight && _movementComponent.IsCrouching;
+            }
+            return false;
+        }
+    }
 
     [SerializeField] private Transform _head;
 

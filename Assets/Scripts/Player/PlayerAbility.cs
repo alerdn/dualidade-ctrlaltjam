@@ -26,17 +26,11 @@ public class PlayerAbility : MonoBehaviour
     private void Update()
     {
         CheckAbilityUnlock();
-        HandleAbilities();
     }
     
     public Ability GetAbility(AbilityID id) => _abilities.Find((ability) => ability.ID == id);
 
     public bool IsAbilityUnlocked(AbilityID id) => GetAbility(id).State == Ability.AbilityState.UNLOCKED;
-
-    private void HandleAbilities()
-    {
-
-    }
 
     private void CheckAbilityUnlock()
     {
