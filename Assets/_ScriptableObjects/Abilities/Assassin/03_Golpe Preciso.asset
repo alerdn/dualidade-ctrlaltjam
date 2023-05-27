@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 03_Golpe Preciso
   m_EditorClassIdentifier: 
   ID: 2
-  State: 1
+  State: 0
   Title: golpe preciso
-  Icon: {fileID: 21300000, guid: 4f3a106299767d146975053c7be09b97, type: 3}
-  Description: "seus golpes ficam cada vez mais mortais. voc\xEA pode assassinar
-    inimigos blindados"
+  Icon: {fileID: 1730744614, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
+  Description: "seus golpes corpo a corpo ficam cada vez mais mortais. voc\xEA pode
+    assassinar inimigos blindados"
   Cost: 100
   Type: 0

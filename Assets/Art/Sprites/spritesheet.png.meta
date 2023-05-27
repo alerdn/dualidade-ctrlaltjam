@@ -661,7 +661,7 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -669,6 +669,132 @@ TextureImporter:
       bones: []
       spriteID: f05f6c6928b1dc1458ab5cafad3af085
       internalID: 1107152370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: passos_pluma
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 276
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad72c0b53dceedc4ab5bca8e4ee3a9ea
+      internalID: 883046127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: veu_noite
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 116
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0801b97d566424f87487da4129ada6
+      internalID: 738097987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arremesso_certeiro
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 276
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0606c0fe5c5f941b405b5ad2664c74
+      internalID: -1202546480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arma_improvisada
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 116
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ed001bbb9b1bf47b756cedaabb963b
+      internalID: -565046923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arremesso fatal
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 276
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60ea47fc0a7eab48b47a53dae5724af
+      internalID: 1719391961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golpe_preciso
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 113
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735ce1ae74058e346bfaf5bb405da74e
+      internalID: 1730744614
       vertices: []
       indices: 
       edges: []
@@ -686,13 +812,19 @@ TextureImporter:
     nameFileIdTable:
       door: -767509080
       lamparina: 1516089986
+      arremesso_certeiro: -1202546480
       puff: -360473181
+      arremesso fatal: 1719391961
       duto: -1321822377
+      passos_pluma: 883046127
       key: 1531497577
       lamp: -1541012741
+      arma_improvisada: -565046923
       crate_scene: -1771611483
       garrafa_1: 1885840096
+      golpe_preciso: 1730744614
       knife: 1134822146
+      spritesheet_0: 1582601576
       thrownables_icon: 1965103707
       saida: 1478293053
       no_click: 512653061
@@ -705,6 +837,7 @@ TextureImporter:
       lock: -1274574308
       mouse_icon: -1660344686
       crate: -1890073997
+      veu_noite: 738097987
       locked_door: 876203519
       duto_inout: -796275342
       window: 1095541396
