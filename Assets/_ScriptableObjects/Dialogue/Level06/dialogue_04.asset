@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1754b8d4f1ccf4b836a48d7bca2571, type: 3}
-  m_Name: AssassinPoints
+  m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
+  m_Name: dialogue_04
   m_EditorClassIdentifier: 
-  Value: 100
+  speakerName: laila
+  speakerSprite: {fileID: -338268944, guid: aaf8b8335567c6e4c83189a7de1f6958, type: 3}
+  _texts:
+  - "Tudo pela liberdade! Os gatos j\xE1 abusaram do poder por tempo demais"
