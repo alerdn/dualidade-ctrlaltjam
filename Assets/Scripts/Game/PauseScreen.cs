@@ -18,6 +18,14 @@ public class PauseScreen : MonoBehaviour
 
     private float _previousTimeScale = 1f;
 
+    private void OnEnable()
+    {
+        _continueButton.interactable = false;
+        _restartButton.interactable = false;
+        _quitButton.interactable = false;
+        StartCoroutine(EnableButtons());
+    }
+
     private void Start()
     {
         _screen.SetActive(false);
@@ -47,6 +55,13 @@ public class PauseScreen : MonoBehaviour
         }
     }
 
+    private IEnumerator EnableButtons()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        _continueButton.interactable = true;
+        _restartButton.interactable = true;
+        _quitButton.interactable = true;
+    }
     private void OpenMenu()
     {
         _previousTimeScale = Time.timeScale;

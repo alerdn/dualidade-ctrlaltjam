@@ -808,7 +808,7 @@ TextureImporter:
         width: 407
         height: 399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -816,6 +816,27 @@ TextureImporter:
       bones: []
       spriteID: 38db4bdb7136be344936925fb4ff073c
       internalID: -1885433633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: radio
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 89
+        width: 156
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c1e4d51b123ec4eae6079139556453
+      internalID: -511982150
       vertices: []
       indices: 
       edges: []
@@ -851,6 +872,7 @@ TextureImporter:
       key_icon: -309867774
       cube: 1107152370
       closet: -1073820979
+      radio: -511982150
       phone: 1778068498
       garrafa_2: 1980570927
       garrafa_3: 622560317

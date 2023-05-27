@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
+  m_Name: dialogue_04_01
+  m_EditorClassIdentifier: 
+  speakerName: silvia
+  speakerSprite: {fileID: -511982150, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
+  _texts:
+  - "Segundo ele, espi\xF5es ratos invadiram pr\xE9dios do governo e roubaram documentos
+    concernentes a defesa da na\xE7\xE3o"
+  - "O nosso presidente Micelin afirma que n\xE3o autorizou nenhuma miss\xE3o do
+    g\xEAnero e que os gatos apenas querem um pretexto para a guerra"
