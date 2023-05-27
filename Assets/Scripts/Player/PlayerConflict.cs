@@ -21,6 +21,7 @@ public class PlayerConflict : MonoBehaviour
 
         if (!CanExecute)
         {
+            if (_enemy != null) _enemy.HideKillIcon();
             _enemy = null;
             return;
         }
