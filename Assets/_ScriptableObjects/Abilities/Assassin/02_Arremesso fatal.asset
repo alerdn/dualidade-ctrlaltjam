@@ -18,5 +18,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 4f3a106299767d146975053c7be09b97, type: 3}
   Description: "eles n\xE3o saber\xE3o o que os atingiu. voc\xEA pode executar inimigos
     lan\xE7ando garrafas"
-  Cost: 120
+  Cost: 60
   Type: 0

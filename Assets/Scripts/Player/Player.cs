@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
     {
         _movementComponent.ResetMovement();
         _throwComponent.ResetThrow();
+        IsInteracting = false;
     }
 
     void OnGUI()

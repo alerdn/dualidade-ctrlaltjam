@@ -69,7 +69,7 @@ public class GameManager : Static<GameManager>
         _assassinPoints.Value += newAssassinPoints;
         _stealthPoints.Value += newStealthPoints;
 
-        PopUpManager.Instance.ShowPoints(newAssassinPoints, newStealthPoints);
+        if (PopUpManager.Instance != null) PopUpManager.Instance.ShowPoints(newAssassinPoints, newStealthPoints);
         _canvaAnimator.SetTrigger("LeaveArea");
     }
 

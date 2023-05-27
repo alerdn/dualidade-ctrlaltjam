@@ -65,7 +65,7 @@ public class Thrownable : MonoBehaviour
             {
                 if (enemy.IsProtected) return;
 
-                enemy.Kill();
+                enemy.Kill(WeaponType.RANGED);
                 OnDefeatEnemy?.Invoke();
                 _breakSfx.Play();
                 Destroy(gameObject);

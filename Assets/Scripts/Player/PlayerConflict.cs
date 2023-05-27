@@ -27,12 +27,14 @@ public class PlayerConflict : MonoBehaviour
             return;
         }
 
+        if (_enemy != null && _enemy.IsProtected) return;
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (IsEnemyWithinReach)
             {
                 UseWeapon();
-                _enemy.Kill();
+                _enemy.Kill(WeaponType.MELEE);
                 _stabSfx.Play();
                 OnDefeatEnemy?.Invoke();
             }
@@ -45,8 +47,6 @@ public class PlayerConflict : MonoBehaviour
 
         if (_knivesSO.Value <= 0) CanExecute = false;
         if (_isArmaImprovisadaUnlocked && _bottlesSO.Value > 0) CanExecute = true;
-
-        if (_enemy != null && _enemy.IsProtected) CanExecute = false;
     }
 
     private void UseWeapon()

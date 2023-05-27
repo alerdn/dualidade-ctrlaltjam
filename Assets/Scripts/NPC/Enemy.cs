@@ -8,7 +8,18 @@ public class Enemy : MonoBehaviour
 {
     public event Action OnKilled;
 
-    public bool IsProtected => _isProtected;
+    public bool IsProtected
+    {
+        get
+        {
+            if (Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.GOLPE_PRECISO) && _playerWeaponType == WeaponType.MELEE)
+            {
+                return false;
+            }
+            return _isProtected;
+        }
+    }
+
     public EnemyDetectionHandler DetectionHandler => _detectionHandler;
 
     [Header("Interaction")]
@@ -23,6 +34,7 @@ public class Enemy : MonoBehaviour
 
     private EnemyMovement _movement;
     private EnemyDetectionHandler _detectionHandler;
+    private WeaponType _playerWeaponType;
 
     private void Awake()
     {
@@ -53,9 +65,10 @@ public class Enemy : MonoBehaviour
         _interactionObject.SetActive(false);
     }
 
-    public void Kill()
+    public void Kill(WeaponType weaponType)
     {
-        if (_isProtected) return;
+        _playerWeaponType = weaponType;
+        if (IsProtected) return;
 
         ParticleSystem ps = Instantiate(_deathEffect);
         ps.transform.position = new Vector3(transform.position.x, transform.position.y, -1f);
@@ -67,4 +80,10 @@ public class Enemy : MonoBehaviour
     {
         _movement.CheckDestination(targetLocation.position);
     }
+}
+
+public enum WeaponType
+{
+    MELEE,
+    RANGED
 }

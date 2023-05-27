@@ -2955,9 +2955,9 @@ MonoBehaviour:
   _line2StealthMaxPoints: 100
   _line2StealthCharge: {fileID: 2552004998639881471}
   _assassinPoints: {fileID: 11400000, guid: 6d45355d5d262884e8eea8f92f2acc71, type: 2}
-  _line1AssassinMaxPoints: 200
+  _line1AssassinMaxPoints: 100
   _line1AssassinCharge: {fileID: 8208926951511298315}
-  _line2AssassinMaxPoints: 400
+  _line2AssassinMaxPoints: 100
   _line2AssassinCharge: {fileID: 5782867801994121844}
 --- !u!1 &5534535427007544646
 GameObject:

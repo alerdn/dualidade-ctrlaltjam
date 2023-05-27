@@ -18,5 +18,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 246d7c7c8e9e6cf43893ae13c5a81bdf, type: 3}
   Description: "voc\xEA se adapta a situa\xE7\xE3o. Pode consumir garrafas para executar
     inimigos ao esgotar suas adagas"
-  Cost: 30
+  Cost: 15
   Type: 0
