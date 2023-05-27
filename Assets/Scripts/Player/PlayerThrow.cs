@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerThrow : MonoBehaviour
 {
+    public event Action OnDefeatEnemy;
+
     public bool CanThrow = true;
     public bool CanBreakLight => Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.ARREMESSO_CERTEIRO);
+    public bool CanKillEnemy => Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.ARREMESSO_FATAL);
 
     public bool IsReadyToThrow => _readyToThrow;
 
@@ -104,7 +108,8 @@ public class PlayerThrow : MonoBehaviour
             {
                 _readyToThrow = false;
                 _thrownablesSO.Value--;
-                _thrownable.Throw(_speed, CanBreakLight);
+                _thrownable.OnDefeatEnemy += OnDefeatEnemy;
+                _thrownable.Throw(_speed, CanBreakLight, CanKillEnemy);
                 _thrownable = null;
             }
         }

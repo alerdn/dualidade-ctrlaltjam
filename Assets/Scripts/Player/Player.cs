@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
 
         _stealthComponent.OnBehindObstacle += TakeCover;
         _conflictComponent.OnDefeatEnemy += OnDefeatEnemy;
+        _throwComponent.OnDefeatEnemy += OnDefeatEnemy;
         _karmaComponent.OnKarmaLevelIncreased += OnKarmaLevelIncreased;
     }
 

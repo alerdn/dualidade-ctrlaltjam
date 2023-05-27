@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 02_Arremesso fatal
   m_EditorClassIdentifier: 
   ID: 1
-  State: 0
+  State: 1
   Title: arremesso fatal
   Icon: {fileID: 21300000, guid: 4f3a106299767d146975053c7be09b97, type: 3}
-  Description: "os inimigos n\xE3o saber\xE3o o que os atingiu. Pode executar inimigos
+  Description: "eles n\xE3o saber\xE3o o que os atingiu. voc\xEA pode executar inimigos
     lan\xE7ando garrafas"
   Cost: 120
   Type: 0

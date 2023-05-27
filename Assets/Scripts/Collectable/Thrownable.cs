@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,18 +6,22 @@ using UnityEngine.Rendering.Universal;
 
 public class Thrownable : MonoBehaviour
 {
+    public event Action OnDefeatEnemy;
+
     private AudioSource _breakSfx;
     private bool _canBreakLight;
+    private bool _canKillEnemy;
 
     private void Start()
     {
         _breakSfx = GetComponent<AudioSource>();
     }
 
-    public void Throw(float speed, bool canBreakLight)
+    public void Throw(float speed, bool canBreakLight, bool canKillEnemy)
     {
         Rigidbody2D throwRB = GetComponent<Rigidbody2D>();
         _canBreakLight = canBreakLight;
+        _canKillEnemy = canKillEnemy;
 
         Vector2 delta = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float _angle = Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg;
@@ -50,6 +55,20 @@ public class Thrownable : MonoBehaviour
                 collision.transform.parent.GetComponentInChildren<Light2D>().gameObject.SetActive(false);
                 _breakSfx.Play();
                 Destroy(gameObject, .5f);
+            }
+        }
+
+        if (_canKillEnemy)
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy)
+            {
+                if (enemy.IsProtected) return;
+
+                enemy.Kill();
+                OnDefeatEnemy?.Invoke();
+                _breakSfx.Play();
+                Destroy(gameObject);
             }
         }
     }
