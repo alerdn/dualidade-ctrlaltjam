@@ -55,3 +55,6 @@ TagManager:
   - name: Char
     uniqueID: 804929841
     locked: 0
+  - name: Overlay
+    uniqueID: 2437506639
+    locked: 0

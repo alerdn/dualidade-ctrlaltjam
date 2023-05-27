@@ -7,4 +7,5 @@ public class Act : ScriptableObject
 {
     public string Title;
     public string Description;
+    public bool Seen;
 }

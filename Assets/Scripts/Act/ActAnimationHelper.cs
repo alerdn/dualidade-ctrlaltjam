@@ -31,6 +31,12 @@ public class ActAnimationHelper : MonoBehaviour
 
     private IEnumerator StartRoutine()
     {
+        if (_act.Seen)
+        {
+            gameObject.SetActive(false);
+            yield break;
+        }
+
         DOTween.To(() => _title.fontSize, (fontSize) => _title.fontSize = fontSize, 100, 2f).From();
         yield return DOTween.To(() => _title.color.a, (alpha) => _title.color = new Color(1f, 1f, 1f, alpha), 1f, 1f).WaitForCompletion();
 
@@ -54,6 +60,7 @@ public class ActAnimationHelper : MonoBehaviour
             .WaitForCompletion();
         yield return DOTween.To(() => _title.color.a, (alpha) => _title.color = new Color(1f, 1f, 1f, alpha), 0f, .25f).WaitForCompletion();
 
+        _act.Seen = true;
         gameObject.SetActive(false);
     }
 }

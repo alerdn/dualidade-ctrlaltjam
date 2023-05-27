@@ -90,8 +90,8 @@ public class Player : MonoBehaviour
             return;
         }
 
-        IsReadyToThrowCheck();
         IsHiddenCheck();
+        IsReadyToThrowCheck();
     }
 
     public void ResetPlayer()

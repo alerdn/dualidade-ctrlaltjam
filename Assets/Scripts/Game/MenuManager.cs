@@ -18,6 +18,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private SOInt _assassinPointsSO;
     [SerializeField] private SOInt _stealthPointsSO;
 
+    [Header("Acts")]
+    [SerializeField] private List<Act> _acts;
+
     [Header("Dialog Setup")]
     [SerializeField] private DialogueV2 _dialogue;
 
@@ -28,6 +31,7 @@ public class MenuManager : MonoBehaviour
     {
         _assassinPointsSO.Value = 0;
         _stealthPointsSO.Value = 0;
+        _acts.ForEach((act) => act.Seen = false);
 
         _playButton.onClick.AddListener(StartGame);
         _quitButton.onClick.AddListener(() => Application.Quit());

@@ -23,6 +23,13 @@ public class PlayerAbility : MonoBehaviour
         });
     }
 
+#if UNITY_EDITOR
+    private void Update()
+    {
+        CheckAbilityUnlock();
+    }
+#endif
+
     public Ability GetAbility(AbilityID id) => _abilities.Find((ability) => ability.ID == id);
 
     public bool IsAbilityUnlocked(AbilityID id) => GetAbility(id).State == Ability.AbilityState.UNLOCKED;
@@ -33,20 +40,23 @@ public class PlayerAbility : MonoBehaviour
 
         _abilities.ForEach((ability) =>
         {
-            if (ability.Type == AbilityType.STEALTH)
+            if (ability.State == Ability.AbilityState.LOCKED)
             {
-                if (ability.Cost <= _stealthPoints.Value)
+                if (ability.Type == AbilityType.STEALTH)
                 {
-                    ability.State = Ability.AbilityState.UNLOCKED;
-                    newAbility = true;
+                    if (ability.Cost <= _stealthPoints.Value)
+                    {
+                        ability.State = Ability.AbilityState.UNLOCKED;
+                        newAbility = true;
+                    }
                 }
-            }
-            else if (ability.Type == AbilityType.ASSASSIN)
-            {
-                if (ability.Cost <= _assassinPoints.Value)
+                else if (ability.Type == AbilityType.ASSASSIN)
                 {
-                    ability.State = Ability.AbilityState.UNLOCKED;
-                    newAbility = true;
+                    if (ability.Cost <= _assassinPoints.Value)
+                    {
+                        ability.State = Ability.AbilityState.UNLOCKED;
+                        newAbility = true;
+                    }
                 }
             }
         });

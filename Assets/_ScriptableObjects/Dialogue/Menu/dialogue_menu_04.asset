@@ -16,4 +16,4 @@ MonoBehaviour:
   speakerSprite: {fileID: 1654801085, guid: 42524690316552648a9f8b61ce70339e, type: 3}
   _texts:
   - Entendido! Owly desligando
-  - "(...ela n\xE3o apenas nossa agente, mas minha filha! Eu vou encontr\xE1-la)"
+  - "(...ela n\xE3o \xE9 apenas nossa agente, mas minha filha! Eu vou encontr\xE1-la)"

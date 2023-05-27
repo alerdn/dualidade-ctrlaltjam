@@ -45,8 +45,14 @@ public class PlayerConflict : MonoBehaviour
     {
         _isArmaImprovisadaUnlocked = Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.ARMA_IMPROVISADA);
 
-        if (_knivesSO.Value <= 0) CanExecute = false;
-        if (_isArmaImprovisadaUnlocked && _bottlesSO.Value > 0) CanExecute = true;
+        if (_isArmaImprovisadaUnlocked)
+        {
+            if (_knivesSO.Value <= 0 && _bottlesSO.Value <= 0) CanExecute = false;
+        }
+        else
+        {
+            if (_knivesSO.Value <= 0) CanExecute = false;
+        }
     }
 
     private void UseWeapon()

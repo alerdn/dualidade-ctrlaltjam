@@ -27,8 +27,6 @@ public class AbilityScreen : MonoBehaviour
     private void OnEnable()
     {
         SelectAbility(null);
-        //HandleStealthProgress();
-        //HandleAssassinProgress();
     }
 
     private void Start()
