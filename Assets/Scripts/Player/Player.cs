@@ -101,15 +101,15 @@ public class Player : MonoBehaviour
         IsInteracting = false;
     }
 
-    void OnGUI()
-    {
-        GUILayout.BeginArea(new Rect(10f, 10f, Screen.width, Screen.height));
+    //void OnGUI()
+    //{
+    //    GUILayout.BeginArea(new Rect(10f, 10f, Screen.width, Screen.height));
 
-        GUILayout.Label($"Player invisible: {IsInvisible}");
-        GUILayout.Label($"Player producing sound: {IsProducingSound}");
+    //    GUILayout.Label($"Player invisible: {IsInvisible}");
+    //    GUILayout.Label($"Player producing sound: {IsProducingSound}");
 
-        GUILayout.EndArea();
-    }
+    //    GUILayout.EndArea();
+    //}
 
     private void IsReadyToThrowCheck()
     {

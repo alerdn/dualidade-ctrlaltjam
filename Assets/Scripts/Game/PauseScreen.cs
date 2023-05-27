@@ -8,6 +8,7 @@ public class PauseScreen : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private Button _continueButton;
+    [SerializeField] private Button _restartButton;
     [SerializeField] private Button _quitButton;
     [SerializeField] private GameObject _screen;
 
@@ -21,6 +22,7 @@ public class PauseScreen : MonoBehaviour
     {
         _screen.SetActive(false);
         _continueButton.onClick.AddListener(Continue);
+        _restartButton.onClick.AddListener(RestartLevel);
         _quitButton.onClick.AddListener(QuitToMenu);
 
         for (int i = 0; i < _actions.Count; i++)
@@ -74,6 +76,12 @@ public class PauseScreen : MonoBehaviour
     {
         Time.timeScale = _previousTimeScale;
         _screen.SetActive(false);
+    }
+
+    private void RestartLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void QuitToMenu()
