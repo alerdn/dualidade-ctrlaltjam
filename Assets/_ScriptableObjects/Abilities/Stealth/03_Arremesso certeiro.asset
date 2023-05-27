@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 03_Arremesso certeiro
   m_EditorClassIdentifier: 
   ID: 5
-  State: 0
+  State: 1
   Title: arremesso certeiro
   Icon: {fileID: 21300000, guid: 61ac40b257b3a994f841856ad38b2b6b, type: 3}
   Description: "seu arremesso foi aperfei\xE7oado com a pr\xE1tica. Voc\xEA pode
-    quebrar lampadas e se aproveitar das sombras"
+    quebrar l\xE2mpadas e se aproveitar das sombras"
   Cost: 100
   Type: 1

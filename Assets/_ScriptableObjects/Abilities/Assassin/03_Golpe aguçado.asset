@@ -18,5 +18,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 4f3a106299767d146975053c7be09b97, type: 3}
   Description: "seus golpes ficam cada vez mais mortais. voc\xEA pode assassinar
     inimigos blindados"
-  Cost: 100
+  Cost: 200
   Type: 0
