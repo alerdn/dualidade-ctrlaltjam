@@ -1983,6 +1983,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Container (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1601009973719450749, guid: c82a0ecfe28e42849bcc9a88f5343457, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.10410003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601009973719450749, guid: c82a0ecfe28e42849bcc9a88f5343457, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.90417564
+      objectReference: {fileID: 0}
     - target: {fileID: 1601009974213854162, guid: c82a0ecfe28e42849bcc9a88f5343457, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.95
