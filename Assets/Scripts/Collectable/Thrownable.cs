@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Thrownable : MonoBehaviour
 {
     private AudioSource _breakSfx;
+    private bool _canBreakLight;
 
     private void Start()
     {
         _breakSfx = GetComponent<AudioSource>();
     }
 
-    public void Throw(float speed)
+    public void Throw(float speed, bool canBreakLight)
     {
         Rigidbody2D throwRB = GetComponent<Rigidbody2D>();
+        _canBreakLight = canBreakLight;
 
         Vector2 delta = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float _angle = Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg;
@@ -38,6 +41,16 @@ public class Thrownable : MonoBehaviour
             gameObject.tag = "Thrownable";
             _breakSfx.Play();
             Destroy(gameObject, .5f);
+        }
+
+        if (_canBreakLight)
+        {
+            if (collision.CompareTag("Bulb"))
+            {
+                collision.transform.parent.GetComponentInChildren<Light2D>().gameObject.SetActive(false);
+                _breakSfx.Play();
+                Destroy(gameObject, .5f);
+            }
         }
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerThrow : MonoBehaviour
 {
     public bool CanThrow = true;
+    public bool CanBreakLight => Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.ARREMESSO_CERTEIRO);
+
     public bool IsReadyToThrow => _readyToThrow;
 
     [SerializeField] private Thrownable _thrownableItem;
@@ -102,7 +104,7 @@ public class PlayerThrow : MonoBehaviour
             {
                 _readyToThrow = false;
                 _thrownablesSO.Value--;
-                _thrownable.Throw(_speed);
+                _thrownable.Throw(_speed, CanBreakLight);
                 _thrownable = null;
             }
         }

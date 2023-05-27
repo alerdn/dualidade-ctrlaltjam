@@ -240,7 +240,7 @@ MonoBehaviour:
   _interactionIcon: {fileID: 540372472486806007}
   _thrownablesSO: {fileID: 11400000, guid: f5841fa98a4a22746916dd7549afcd7c, type: 2}
   _direction: {x: 1, y: 1}
-  _speed: 10
+  _speed: 15
 --- !u!114 &7793567162020462401
 MonoBehaviour:
   m_ObjectHideFlags: 0

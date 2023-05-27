@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    public PlayerAbility AbilityComponent => _abilityComponent;
     public bool IsRunning => _movementComponent.IsRunning;
     public bool IsCrouching => _movementComponent.IsCrouching;
     public Transform Head => _head;

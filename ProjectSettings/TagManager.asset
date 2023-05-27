@@ -11,6 +11,7 @@ TagManager:
   - Floor
   - NPC
   - Light
+  - Bulb
   layers:
   - Default
   - TransparentFX
