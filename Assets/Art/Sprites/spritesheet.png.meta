@@ -799,6 +799,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: window_out
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1516
+        width: 407
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38db4bdb7136be344936925fb4ff073c
+      internalID: -1885433633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -824,7 +845,6 @@ TextureImporter:
       garrafa_1: 1885840096
       golpe_preciso: 1730744614
       knife: 1134822146
-      spritesheet_0: 1582601576
       thrownables_icon: 1965103707
       saida: 1478293053
       no_click: 512653061
@@ -843,6 +863,7 @@ TextureImporter:
       window: 1095541396
       wardrobe_scene: 340219068
       bulb: 203884169
+      window_out: 1582601576
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

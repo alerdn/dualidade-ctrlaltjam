@@ -1893,7 +1893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9093310388345828516
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3184,7 +3184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9034847692227963625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5686,6 +5686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2778545408568513502}
     m_Modifications:
+    - target: {fileID: 1029205514998365968, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 1512526903190087059}
     - target: {fileID: 2754526093647367414, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
       propertyPath: m_Name
       value: Jogo Action Button
@@ -5776,6 +5780,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
+--- !u!114 &1512526903190087059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5415063281990454274, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
+  m_PrefabInstance: {fileID: 6907317215529314705}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2410021373903987198 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9127008374669822063, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
@@ -6019,10 +6034,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2778545408568513502}
     m_Modifications:
-    - target: {fileID: 2719928276838459592, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
-      propertyPath: m_text
-      value: habilidades
-      objectReference: {fileID: 0}
+    - target: {fileID: 1029205514998365968, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 2374773429641764373}
     - target: {fileID: 2754526093647367414, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
       propertyPath: m_Name
       value: Poderes Action Button
@@ -6111,9 +6126,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8140061119881851872, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 5969257297013084205, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
+      propertyPath: m_text
+      value: habilidades
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
@@ -6122,31 +6137,23 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9127008374669822063, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
   m_PrefabInstance: {fileID: 7769492791336899095}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5613950670823317217}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b8e98e5021bcbd45b99058897657263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5613950670823317217 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2754526093647367414, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
+--- !u!114 &2374773429641764373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5415063281990454274, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
   m_PrefabInstance: {fileID: 7769492791336899095}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &937242307493848564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5613950670823317217}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
 --- !u!224 &6380731607925174659 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3701432297319605140, guid: a0ecf18f8eb38744ebdfd538f64b2b3d, type: 3}
