@@ -463,6 +463,384 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: lamp
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 226
+        width: 208
+        height: 414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e526ac78a1a985e4386c07d4891f3147
+      internalID: -1541012741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulb
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 195
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a87aa4be952a048a596ca954c64cf7
+      internalID: 203884169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saida
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 507
+        width: 218
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092c66891a0d97e428c7df43e89e70b2
+      internalID: 1478293053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duto
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 491
+        width: 783
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b148b42dfb0246b4b9c60a558ec51561
+      internalID: -1321822377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duto_inout
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 279
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a265deab638dcfe4fadb7b3dd59ac98a
+      internalID: -796275342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knife
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1350
+        width: 142
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8a4c65491a56f42802e0386eb4343d
+      internalID: 1134822146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lamparina
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 286
+        width: 108
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142160865a36eb04caf7260361044356
+      internalID: 1516089986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lock
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 308
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cc469d720b11243bb319ffbab7bafe
+      internalID: -1274574308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: no_click
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1767
+        width: 100
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4e776be3a3eeb4eb4caf9c934c5151
+      internalID: 512653061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cube
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 292
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05f6c6928b1dc1458ab5cafad3af085
+      internalID: 1107152370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: passos_pluma
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 276
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad72c0b53dceedc4ab5bca8e4ee3a9ea
+      internalID: 883046127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: veu_noite
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 116
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0801b97d566424f87487da4129ada6
+      internalID: 738097987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arremesso_certeiro
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 276
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0606c0fe5c5f941b405b5ad2664c74
+      internalID: -1202546480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arma_improvisada
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 116
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ed001bbb9b1bf47b756cedaabb963b
+      internalID: -565046923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arremesso fatal
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 276
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60ea47fc0a7eab48b47a53dae5724af
+      internalID: 1719391961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golpe_preciso
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 113
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735ce1ae74058e346bfaf5bb405da74e
+      internalID: 1730744614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: window_out
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1516
+        width: 407
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38db4bdb7136be344936925fb4ff073c
+      internalID: -1885433633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: radio
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 89
+        width: 156
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c1e4d51b123ec4eae6079139556453
+      internalID: -511982150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -475,21 +853,39 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       door: -767509080
+      lamparina: 1516089986
+      arremesso_certeiro: -1202546480
       puff: -360473181
+      arremesso fatal: 1719391961
+      duto: -1321822377
+      passos_pluma: 883046127
       key: 1531497577
+      lamp: -1541012741
+      arma_improvisada: -565046923
       crate_scene: -1771611483
       garrafa_1: 1885840096
+      golpe_preciso: 1730744614
+      knife: 1134822146
       thrownables_icon: 1965103707
+      saida: 1478293053
+      no_click: 512653061
       key_icon: -309867774
+      cube: 1107152370
       closet: -1073820979
+      radio: -511982150
       phone: 1778068498
       garrafa_2: 1980570927
       garrafa_3: 622560317
+      lock: -1274574308
       mouse_icon: -1660344686
       crate: -1890073997
+      veu_noite: 738097987
       locked_door: 876203519
+      duto_inout: -796275342
       window: 1095541396
       wardrobe_scene: 340219068
+      bulb: 203884169
+      window_out: 1582601576
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

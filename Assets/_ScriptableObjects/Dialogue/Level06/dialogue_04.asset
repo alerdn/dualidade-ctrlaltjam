@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
+  m_Name: dialogue_04
+  m_EditorClassIdentifier: 
+  speakerName: laila
+  speakerSprite: {fileID: -338268944, guid: aaf8b8335567c6e4c83189a7de1f6958, type: 3}
+  _texts:
+  - "Tudo pela liberdade! Os gatos j\xE1 abusaram do poder por tempo demais"

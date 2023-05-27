@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
   m_Name: dialogue_03
   m_EditorClassIdentifier: 
-  speakerName: rato preocupado
+  speakerName: roger
   speakerSprite: {fileID: 135687347, guid: 168168ab6f5101341a7bb116bd553be3, type: 3}
   _texts:
-  - "Voc\xEA \xE9 que \xE9 tranquilo demais, Frank"
-  - O que o Chefe quer com aquela coruja, afinal?
+  - "Todos estamos, os gatos j\xE1 levaram muitos de n\xF3s"
+  - "Mas uma coruja se oferecer? Tem parada errada a\xED, Frank"

@@ -9,13 +9,13 @@ public class DoorHandler : MonoBehaviour
 
     [SerializeField] private SOInt _keys;
     [SerializeField] private GameObject _interactionIcon;
-    [SerializeField] private Dialogue _dialogue;
+    [SerializeField] protected Dialogue _dialogue;
 
     private AudioSource _unlockSound;
     private bool _canOpen;
     private bool _inRange;
 
-    private void Start()
+    protected virtual void Start()
     {
         _unlockSound = GetComponent<AudioSource>();
         _interactionIcon.SetActive(false);
@@ -44,9 +44,13 @@ public class DoorHandler : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player)
         {
-            _interactionIcon.SetActive(true);
-            _canOpen = _keys.Value > 0;
-            _inRange = true;
+            if (!player.IsInteracting)
+            {
+                player.IsInteracting = true;
+                _interactionIcon.SetActive(true);
+                _canOpen = _keys.Value > 0;
+                _inRange = true;
+            }
         }
     }
 
@@ -55,6 +59,7 @@ public class DoorHandler : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player)
         {
+            player.IsInteracting = false;
             _interactionIcon.SetActive(false);
             _canOpen = false;
             _inRange = false;

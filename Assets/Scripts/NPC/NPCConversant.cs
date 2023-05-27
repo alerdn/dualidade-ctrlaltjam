@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCConversant : MonoBehaviour
 {
-    [SerializeField] private Dialogue _dialogue;
+    [SerializeField] private DialogueV2 _dialogue;
     [SerializeField] private GameObject _interactionIcon;
     [SerializeField] private bool _autoTalk;
 
@@ -45,21 +45,16 @@ public class NPCConversant : MonoBehaviour
         _dialogue.gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Player player = collision.GetComponent<Player>();
-        if (player)
-        {
-            _canTalk = true;
-        }
-    }
-    
     private void OnTriggerStay2D(Collider2D collision)
     {
         Player player = collision.GetComponent<Player>();
         if (player)
         {
-            _canTalk = true;
+            if (!player.IsInteracting)
+            {
+                _canTalk = true;
+                player.IsInteracting = true;
+            }
         }
     }
 
@@ -69,6 +64,7 @@ public class NPCConversant : MonoBehaviour
         if (player)
         {
             _canTalk = false;
+            player.IsInteracting = false;
         }
     }
 }

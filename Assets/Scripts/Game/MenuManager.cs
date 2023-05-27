@@ -14,19 +14,30 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Image _foreground;
     [SerializeField] private Animator _canvaAnimator;
 
+    [Header("Points")]
+    [SerializeField] private SOInt _assassinPointsSO;
+    [SerializeField] private SOInt _stealthPointsSO;
+
+    [Header("Acts")]
+    [SerializeField] private List<Act> _acts;
+
     [Header("Dialog Setup")]
-    [SerializeField] private Dialogue _dialog;
+    [SerializeField] private DialogueV2 _dialogue;
 
     [Header("Entities")]
     [SerializeField] private GameObject _char;
 
     private void Start()
     {
+        _assassinPointsSO.Value = 0;
+        _stealthPointsSO.Value = 0;
+        _acts.ForEach((act) => act.Seen = false);
+
         _playButton.onClick.AddListener(StartGame);
         _quitButton.onClick.AddListener(() => Application.Quit());
 
-        _dialog.gameObject.SetActive(false);
-        _dialog.OnDialogueFinished += () => StartCoroutine(CloseDialog());
+        _dialogue.gameObject.SetActive(false);
+        _dialogue.OnDialogueFinished += () => StartCoroutine(CloseDialog());
 
         if (Player.Instance != null)
         {
@@ -40,12 +51,12 @@ public class MenuManager : MonoBehaviour
         _quitButton.interactable = false;
 
         _canvaAnimator.SetTrigger("SlideOut");
-        _dialog.gameObject.SetActive(true);
+        _dialogue.gameObject.SetActive(true);
     }
 
     private IEnumerator CloseDialog()
     {
-        _dialog.gameObject.SetActive(false);
+        _dialogue.gameObject.SetActive(false);
         yield return _char.transform.DOMoveX(20f, 2f).SetRelative();
         _canvaAnimator.SetTrigger("FadeOut");
     }

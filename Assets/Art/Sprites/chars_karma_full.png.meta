@@ -475,6 +475,27 @@ TextureImporter:
         boneIndex[1]: 2
         boneIndex[2]: 0
         boneIndex[3]: 0
+    - serializedVersion: 2
+      name: chars_karma_full_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 23
+        width: 170
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911d548623f094b40bdb58f6f03a5d4d
+      internalID: -338268944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -487,6 +508,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       chars_karma_full_0: -1929390886
+      chars_karma_full_1: -338268944
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

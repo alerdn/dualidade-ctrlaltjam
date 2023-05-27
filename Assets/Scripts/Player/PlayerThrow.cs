@@ -1,20 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerThrow : MonoBehaviour
 {
-    public bool CanThrow = true;
+    public event Action OnDefeatEnemy;
 
-    [SerializeField] private GameObject _thrownableItem;
+    public bool CanThrow = true;
+    public bool CanBreakLight => Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.ARREMESSO_CERTEIRO);
+    public bool CanKillEnemy => Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.ARREMESSO_FATAL);
+
+    public bool IsReadyToThrow => _readyToThrow;
+
+    [SerializeField] private Thrownable _thrownableItem;
     [SerializeField] private GameObject _interactionIcon;
 
     [Header("Setup")]
     [SerializeField] private SOInt _thrownablesSO;
     [SerializeField] private Vector2 _direction;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speed = 10f;
 
-    private GameObject _thrownable;
+    private Thrownable _thrownable;
     private bool _readyToThrow;
 
     private void Start()
@@ -26,9 +33,7 @@ public class PlayerThrow : MonoBehaviour
     {
         if (!CanThrow)
         {
-            Cursor.visible = true;
-            _interactionIcon.SetActive(false);
-            if (_thrownable != null) Destroy(_thrownable);
+            ResetThrow();
             return;
         }
 
@@ -38,6 +43,18 @@ public class PlayerThrow : MonoBehaviour
         if (_thrownable != null) _thrownable.transform.position = new Vector2(transform.position.x - 1, transform.position.y + 1);
 
         ThrowItem();
+    }
+
+    public void ResetThrow()
+    {
+        Cursor.visible = true;
+        _interactionIcon.SetActive(false);
+        _readyToThrow = false;
+        if (_thrownable != null)
+        {
+            Destroy(_thrownable.gameObject);
+            _thrownable = null;
+        }
     }
 
     private void HandleThrownMode()
@@ -58,7 +75,8 @@ public class PlayerThrow : MonoBehaviour
             {
                 Cursor.visible = true;
                 _interactionIcon.SetActive(false);
-                Destroy(_thrownable);
+                Destroy(_thrownable.gameObject);
+                _thrownable = null;
             }
         }
     }
@@ -86,29 +104,14 @@ public class PlayerThrow : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (_readyToThrow)
+            if (_readyToThrow && Time.timeScale == 1f)
             {
                 _readyToThrow = false;
                 _thrownablesSO.Value--;
-                Rigidbody2D throwRB = _thrownable.GetComponent<Rigidbody2D>();
-
-                Vector2 delta = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                float _angle = Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg;
-                if (_angle < 0) _angle += 360;
-
-                _direction = RadianToVector2(_angle * Mathf.Deg2Rad);
-
-                _thrownable.transform.parent = null;
-                throwRB.gravityScale = 1;
-                throwRB.AddForce(_direction * _speed, ForceMode2D.Impulse);
-
+                _thrownable.OnDefeatEnemy += OnDefeatEnemy;
+                _thrownable.Throw(_speed, CanBreakLight, CanKillEnemy);
                 _thrownable = null;
             }
         }
-    }
-
-    private static Vector2 RadianToVector2(float radian)
-    {
-        return new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
     }
 }

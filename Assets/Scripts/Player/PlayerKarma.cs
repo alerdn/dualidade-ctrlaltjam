@@ -34,14 +34,6 @@ public class PlayerKarma : MonoBehaviour
         CheckKarmaLevel();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            EnemyDefeated++;
-        }
-    }
-
     public void CheckKarmaLevel()
     {
         int nextLevel = EnemyDefeated / _minEnemiesToChange;

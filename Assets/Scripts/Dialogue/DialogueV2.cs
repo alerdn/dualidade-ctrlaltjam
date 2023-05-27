@@ -5,17 +5,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using Cinemachine;
 
 public class DialogueV2 : MonoBehaviour
 {
     public event Action OnDialogueFinished;
 
+    [Header("UI")]
     [SerializeField] private Button _nextButton;
     [SerializeField] private TMP_Text _textField;
     [SerializeField] private TMP_Text _speakerField;
     [SerializeField] private Image _speakerImage;
     [SerializeField] private List<DialogueData> _dialogueDatas;
-    [SerializeField] private float timeBtwChars = 0.1f;
+    [SerializeField] private float timeBtwChars = 0.05f;
+    [SerializeField] private bool _freezeTimeWhenOpen = true;
 
     private AudioSource _typeSound;
     private int _currentTextIndex;
@@ -23,10 +26,20 @@ public class DialogueV2 : MonoBehaviour
     private bool _isTyping;
     private Coroutine _typingRoutine;
 
+    private void OnEnable()
+    {
+        if (_freezeTimeWhenOpen) Time.timeScale = 0;
+    }
+
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
+    }
+
     private void Start()
     {
         _typeSound = GetComponent<AudioSource>();
-        transform.DOScale(Vector3.zero, .5f).From();
+        transform.DOScale(Vector3.zero, .5f).From().SetUpdate(true);
 
         _nextButton.onClick.AddListener(NextConversation);
         _currentDialogueIndex = 0;
@@ -48,18 +61,18 @@ public class DialogueV2 : MonoBehaviour
         }
         _isTyping = true;
 
-        if (_currentDialogueIndex + 1 >= _dialogueDatas.Count)
-        {
-            _typingRoutine = null;
-            _isTyping = false;
-            OnDialogueFinished?.Invoke();
-            return;
-        }
-
         /// Muda o speaker
         if (_currentTextIndex + 1 > _dialogueDatas[_currentDialogueIndex]._texts.Count - 1)
         {
-            _speakerImage.transform.DOScale(0f, .25f).From();
+            if (_currentDialogueIndex + 1 >= _dialogueDatas.Count)
+            {
+                _typingRoutine = null;
+                _isTyping = false;
+                OnDialogueFinished?.Invoke();
+                return;
+            }
+
+            _speakerImage.transform.DOScale(0f, .25f).From().SetUpdate(true);
             _currentDialogueIndex++;
             _currentTextIndex = -1;
         }
@@ -78,9 +91,10 @@ public class DialogueV2 : MonoBehaviour
         foreach (char c in _dialogueDatas[_currentDialogueIndex]._texts[_currentTextIndex])
         {
             _textField.text += c;
-            yield return new WaitForSeconds(timeBtwChars);
+            yield return new WaitForSecondsRealtime(timeBtwChars);
         }
 
+        _typeSound.Stop();
         _typingRoutine = null;
         _isTyping = false;
     }

@@ -10,10 +10,24 @@ public class EndScreen : MonoBehaviour
     [SerializeField] private Button _continueButton;
     [SerializeField] private Button _quitButton;
 
+    private void OnEnable()
+    {
+        _continueButton.interactable = false;
+        _quitButton.interactable = false;
+        StartCoroutine(EnableButtons());
+    }
+
     private void Start()
     {
         _continueButton.onClick.AddListener(Continue);
         _quitButton.onClick.AddListener(QuitToMenu);
+    }
+
+    private IEnumerator EnableButtons()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        _continueButton.interactable = true;
+        _quitButton.interactable = true;
     }
 
     private void Continue()

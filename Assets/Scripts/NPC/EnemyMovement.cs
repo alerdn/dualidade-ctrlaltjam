@@ -30,6 +30,7 @@ public class EnemyMovement : MonoBehaviour
     private Coroutine _walkRoutine;
     private Coroutine _checkDestinationRoutine;
     private Tween _currentMovementTween;
+    private bool _hasStartedScript = false;
 
     private void Start()
     {
@@ -37,8 +38,15 @@ public class EnemyMovement : MonoBehaviour
 
         _path = new();
         _pathTransforms.ForEach(path => _path.Add(path.position));
+    }
 
-        _walkRoutine = StartCoroutine(WalkRoutine());
+    private void OnBecameVisible()
+    {
+        if (!_hasStartedScript)
+        {
+            _hasStartedScript = true;
+            _walkRoutine = StartCoroutine(WalkRoutine());
+        }
     }
 
     public void StartWalkRoutine()

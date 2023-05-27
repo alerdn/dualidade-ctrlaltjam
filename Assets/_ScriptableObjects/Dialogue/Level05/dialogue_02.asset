@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6b0a35fff8ad24dbae15499907d56a, type: 3}
   m_Name: dialogue_02
   m_EditorClassIdentifier: 
-  speakerName: "rato distra\xEDdo"
-  speakerSprite: {fileID: 135687347, guid: 168168ab6f5101341a7bb116bd553be3, type: 3}
+  speakerName: "rato esperan\xE7oso"
+  speakerSprite: {fileID: -462715443, guid: 03d90ad3362eb4241bd70f360b866c5c, type: 3}
   _texts:
-  - "Voc\xEA precisa \xE9 relaxar, estamos no nosso territ\xF3rio, estamos seguros"
+  - "Tenha f\xE9 em alguma coisa, Roger. Dessa vez a gente tem alguma chance"
+  - "Voc\xEA n\xE3o t\xE1 cansado desse conflito que nunca acaba?"

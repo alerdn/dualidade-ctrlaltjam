@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be108f456ead57144817aea9a3f249e5, type: 3}
+  m_Name: 02_Arremesso fatal
+  m_EditorClassIdentifier: 
+  ID: 1
+  State: 0
+  Title: arremesso fatal
+  Icon: {fileID: 1719391961, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
+  Description: "eles n\xE3o saber\xE3o o que os atingiu. voc\xEA pode executar inimigos
+    lan\xE7ando garrafas"
+  Cost: 60
+  Type: 0

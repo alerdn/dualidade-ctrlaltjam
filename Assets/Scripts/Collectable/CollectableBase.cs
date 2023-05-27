@@ -10,14 +10,19 @@ public class CollectableBase : MonoBehaviour
     private SpriteRenderer _renderer;
     private bool _canCollect;
 
+    private InteractableObject _interaction;
+
     private void Start()
     {
+        _interaction = GetComponent<InteractableObject>();
         _renderer = GetComponent<SpriteRenderer>();
         _renderer.sprite = _sprites[Random.Range(0, _sprites.Count)];
     }
 
     private void Update()
     {
+        if (!_interaction.CanInteract) return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (_canCollect) Collect();
