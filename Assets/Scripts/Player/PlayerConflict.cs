@@ -10,14 +10,15 @@ public class PlayerConflict : MonoBehaviour
     public bool CanExecute = true;
 
     [SerializeField] private SOInt _knivesSO;
+    [SerializeField] private SOInt _bottlesSO;
     [SerializeField] private AudioSource _stabSfx;
 
     private Enemy _enemy;
+    private bool _isArmaImprovisadaUnlocked;
 
     private void Update()
     {
-        if (_knivesSO.Value <= 0) CanExecute = false;
-        if (_enemy != null && _enemy.IsProtected) CanExecute = false;
+        CheckCanExecute();
 
         if (!CanExecute)
         {
@@ -30,11 +31,33 @@ public class PlayerConflict : MonoBehaviour
         {
             if (IsEnemyWithinReach)
             {
-                _knivesSO.Value--;
+                UseWeapon();
                 _enemy.Kill();
                 _stabSfx.Play();
                 OnDefeatEnemy?.Invoke();
             }
+        }
+    }
+
+    private void CheckCanExecute()
+    {
+        _isArmaImprovisadaUnlocked = Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.ARMA_IMPROVISADA);
+
+        if (_knivesSO.Value <= 0) CanExecute = false;
+        if (_isArmaImprovisadaUnlocked && _bottlesSO.Value > 0) CanExecute = true;
+
+        if (_enemy != null && _enemy.IsProtected) CanExecute = false;
+    }
+
+    private void UseWeapon()
+    {
+        if (_knivesSO.Value > 0)
+        {
+            _knivesSO.Value--;
+        }
+        else if (_isArmaImprovisadaUnlocked)
+        {
+            _bottlesSO.Value--;
         }
     }
 

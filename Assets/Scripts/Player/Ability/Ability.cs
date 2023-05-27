@@ -24,7 +24,7 @@ public class Ability : ScriptableObject
 
 public enum AbilityID
 {
-    ARMA_IMPROVIDASA,
+    ARMA_IMPROVISADA,
     ARREMESSO_FATAL,
     GOLPE_AGUCADO,
     PASSOS_DE_PLUMA,

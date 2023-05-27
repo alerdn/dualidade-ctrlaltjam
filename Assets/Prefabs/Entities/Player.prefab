@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanExecute: 0
   _knivesSO: {fileID: 11400000, guid: b8521a2769d5788468f159428effccaa, type: 2}
+  _bottlesSO: {fileID: 11400000, guid: f5841fa98a4a22746916dd7549afcd7c, type: 2}
   _stabSfx: {fileID: 3180700085219275935}
 --- !u!114 &8484734965611838540
 MonoBehaviour:
