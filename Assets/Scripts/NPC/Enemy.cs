@@ -54,9 +54,9 @@ public class Enemy : MonoBehaviour
         if (_interactionObject.activeInHierarchy) _interactionObject.transform.rotation = Quaternion.identity;
     }
 
-    public void ShowKillIcon()
+    public void ShowKillIcon(bool canKill)
     {
-        _interactionIcon.sprite = IsProtected ? _cannotKillSprite : _canKillSprite;
+        _interactionIcon.sprite = IsProtected || !canKill ? _cannotKillSprite : _canKillSprite;
         _interactionObject.SetActive(true);
     }
 
