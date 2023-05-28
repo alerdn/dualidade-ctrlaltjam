@@ -72,10 +72,14 @@ public class PlayerConflict : MonoBehaviour
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy)
         {
-            if (!CanExecute) return;
+            if (!CanExecute)
+            {
+                enemy.ShowKillIcon(false);
+                return;
+            }
 
             _enemy = enemy;
-            _enemy.ShowKillIcon();
+            _enemy.ShowKillIcon(true);
         }
     }
 
