@@ -17,12 +17,6 @@ public class PopUpManager : Static<PopUpManager>
         _abilityPop.color = new Color(0f, 0f, 0f, 0f);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-            ShowPoints(100, 100);
-    }
-
     public void ShowPoints(int assassinPoints, int stealthPoints)
     {
         if (Player.Instance.AbilityComponent.CheckAbilityUnlock())
