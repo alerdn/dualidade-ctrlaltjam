@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isCrouching)
         {
-            speedModifier = .5f;
+            speedModifier = Player.Instance.AbilityComponent.IsAbilityUnlocked(AbilityID.PASSOS_DE_PLUMA) ? .9f : .5f;
         }
 
         if (_isRunning)

@@ -16,7 +16,7 @@ MonoBehaviour:
   State: 1
   Title: passos de pluma
   Icon: {fileID: 883046127, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
-  Description: "sua pr\xE1tica em furtividade a ensinou a caminhar em p\xE9 sem fazer
-    barulho"
-  Cost: 15
+  Description: "sua pr\xE1tica em furtividade a ensinou a caminhar agachada mais
+    rapidamente"
+  Cost: 10
   Type: 1

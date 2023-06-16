@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class AbilityButton : MonoBehaviour
 {
-    public event Action<Ability> OnClick;
+    public event Action<AbilityButton, Ability> OnClick;
 
     public Ability AbilityData => _abilityData;
 
     [SerializeField] private Ability _abilityData;
     [SerializeField] private Image _icon;
+    [SerializeField] private Image _selectionImage;
 
     [Header("Backgorund")]
     [SerializeField] private Color _lockColor;
@@ -22,6 +23,7 @@ public class AbilityButton : MonoBehaviour
 
     private void Start()
     {
+        _selectionImage.enabled = false;
         _background = GetComponent<Image>();
         _button = GetComponent<Button>();
         _button.onClick.AddListener(CallClick);
@@ -30,6 +32,16 @@ public class AbilityButton : MonoBehaviour
         {
             _icon.sprite = _abilityData.Icon;
         }
+    }
+
+    public void Select()
+    {
+        _selectionImage.enabled = true;
+    }
+
+    public void Deselect()
+    {
+        _selectionImage.enabled = false;
     }
 
     public void SetUnlockColor()
@@ -45,6 +57,6 @@ public class AbilityButton : MonoBehaviour
     private void CallClick()
     {
         if (_abilityData == null) return;
-        OnClick?.Invoke(_abilityData);
+        OnClick?.Invoke(this, _abilityData);
     }
 }

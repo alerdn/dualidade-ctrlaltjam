@@ -11,18 +11,7 @@ public class Player : MonoBehaviour
 
     public bool IsInteracting;
 
-    public bool IsProducingSound
-    {
-        get
-        {
-            if (_abilityComponent.IsAbilityUnlocked(AbilityID.PASSOS_DE_PLUMA))
-            {
-                return false;
-            }
-            return _movementComponent.IsProducingSound;
-        }
-    }
-
+    public bool IsProducingSound => _movementComponent.IsProducingSound;
     public PlayerAbility AbilityComponent => _abilityComponent;
     public bool IsRunning => _movementComponent.IsRunning;
     public bool IsCrouching => _movementComponent.IsCrouching;

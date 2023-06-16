@@ -26,7 +26,7 @@ public class AbilityScreen : MonoBehaviour
 
     private void OnEnable()
     {
-        SelectAbility(null);
+        SelectAbility(null, null);
     }
 
     private void Start()
@@ -46,7 +46,7 @@ public class AbilityScreen : MonoBehaviour
     private void HandleStealthProgress()
     {
         _line1StealthCharge.fillAmount = (float)_stealthPoints.Value * 100f / _line1StealthMaxPoints / 100f;
-        _line2StealthCharge.fillAmount = (float)(_stealthPoints.Value - _line1StealthMaxPoints) * 100f / _line2StealthMaxPoints / 100f;
+        //_line2StealthCharge.fillAmount = (float)(_stealthPoints.Value - _line1StealthMaxPoints) * 100f / _line2StealthMaxPoints / 100f;
 
 
         _abilities.ForEach((ability) =>
@@ -63,7 +63,7 @@ public class AbilityScreen : MonoBehaviour
     private void HandleAssassinProgress()
     {
         _line1AssassinCharge.fillAmount = (float)_assassinPoints.Value * 100f / _line1AssassinMaxPoints / 100f;
-        _line2AssassinCharge.fillAmount = (float)(_assassinPoints.Value - _line1AssassinMaxPoints) * 100f / _line2AssassinMaxPoints / 100f;
+        //_line2AssassinCharge.fillAmount = (float)(_assassinPoints.Value - _line1AssassinMaxPoints) * 100f / _line2AssassinMaxPoints / 100f;
 
 
         _abilities.ForEach((ability) =>
@@ -78,13 +78,25 @@ public class AbilityScreen : MonoBehaviour
         });
     }
 
-    private void SelectAbility(Ability data)
+    private void SelectAbility(AbilityButton button, Ability data)
     {
         if (data == null)
         {
             _abilityDetail.gameObject.SetActive(false);
             return;
         }
+
+        _abilities.ForEach(abilityButton =>
+        {
+            if (abilityButton != button)
+            {
+                abilityButton.Deselect();
+            }
+            else
+            {
+                abilityButton.Select();
+            }
+        });
 
         _abilityDetail.Show(data);
     }
