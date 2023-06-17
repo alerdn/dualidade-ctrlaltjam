@@ -18,5 +18,5 @@ MonoBehaviour:
   Icon: {fileID: 738097987, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
   Description: "torne-se um com a escurid\xE3o. Voc\xEA pode se camuflar agachada
     na escurid\xE3o"
-  Cost: 60
+  Cost: 72
   Type: 1

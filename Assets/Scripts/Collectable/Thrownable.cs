@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class Thrownable : MonoBehaviour
 {
     public event Action OnDefeatEnemy;
+
+    [SerializeField] private ParticleSystem _vfxSoundWave;
 
     private AudioSource _breakSfx;
     private bool _canBreakLight;
@@ -45,6 +48,11 @@ public class Thrownable : MonoBehaviour
         {
             gameObject.tag = "Thrownable";
             _breakSfx.Play();
+
+            /// Remove ele do prefab para não ser destruído antes da hora
+            _vfxSoundWave.transform.parent = null;
+            _vfxSoundWave.Play();
+
             Destroy(gameObject, .5f);
         }
 
@@ -52,7 +60,7 @@ public class Thrownable : MonoBehaviour
         {
             if (collision.CompareTag("Bulb"))
             {
-                collision.transform.parent.GetComponentInChildren<Light2D>().gameObject.SetActive(false);
+                collision.transform.parent.GetComponentsInChildren<Light2D>().ToList().ForEach((light) => light.gameObject.SetActive(false));
                 _breakSfx.Play();
                 Destroy(gameObject, .5f);
             }

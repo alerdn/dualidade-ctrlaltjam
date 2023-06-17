@@ -12,15 +12,15 @@ public class AbilityScreen : MonoBehaviour
     [SerializeField] private SOInt _stealthPoints;
     [SerializeField] private float _line1StealthMaxPoints = 100f;
     [SerializeField] private Image _line1StealthCharge;
-    [SerializeField] private float _line2StealthMaxPoints = 100f;
-    [SerializeField] private Image _line2StealthCharge;
+    //[SerializeField] private float _line2StealthMaxPoints = 100f;
+    //[SerializeField] private Image _line2StealthCharge;
 
     [Header("Assassin")]
     [SerializeField] private SOInt _assassinPoints;
     [SerializeField] private float _line1AssassinMaxPoints = 100f;
     [SerializeField] private Image _line1AssassinCharge;
-    [SerializeField] private float _line2AssassinMaxPoints = 100f;
-    [SerializeField] private Image _line2AssassinCharge;
+    //[SerializeField] private float _line2AssassinMaxPoints = 100f;
+    //[SerializeField] private Image _line2AssassinCharge;
 
     private List<AbilityButton> _abilities = new();
 
@@ -83,6 +83,7 @@ public class AbilityScreen : MonoBehaviour
         if (data == null)
         {
             _abilityDetail.gameObject.SetActive(false);
+            _abilities.ForEach(abilityButton => abilityButton.Deselect());
             return;
         }
 

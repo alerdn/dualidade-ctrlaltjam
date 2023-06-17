@@ -10,6 +10,8 @@ public class GameManager : Static<GameManager>
     public bool IsGameOver => _isGameOver;
     public bool IsPlayerLocked { get; private set; }
 
+    [SerializeField] private bool _isLevelBonus;
+
     [Header("Collectables")]
     [SerializeField] private SOInt _thrownables;
     [SerializeField] private SOInt _knives;
@@ -65,6 +67,12 @@ public class GameManager : Static<GameManager>
 
         int newAssassinPoints = _currentEnemyCount * 10;
         int newStealthPoints = (_maxEnemyCount - _currentEnemyCount) * 10;
+
+        if (_isLevelBonus)
+        {
+            newAssassinPoints *= 2;
+            newStealthPoints *= 2;
+        }
 
         _assassinPoints.Value += newAssassinPoints;
         _stealthPoints.Value += newStealthPoints;

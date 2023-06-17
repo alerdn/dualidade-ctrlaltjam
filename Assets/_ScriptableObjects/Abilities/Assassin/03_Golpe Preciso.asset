@@ -18,5 +18,5 @@ MonoBehaviour:
   Icon: {fileID: 1730744614, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
   Description: "seus golpes corpo a corpo ficam cada vez mais mortais. voc\xEA pode
     assassinar inimigos blindados"
-  Cost: 100
+  Cost: 120
   Type: 0

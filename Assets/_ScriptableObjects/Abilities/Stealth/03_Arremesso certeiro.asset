@@ -18,5 +18,5 @@ MonoBehaviour:
   Icon: {fileID: -1202546480, guid: 654e2264293b5c04d8a956d13af4a6ec, type: 3}
   Description: "seu arremesso foi aperfei\xE7oado com a pr\xE1tica. Voc\xEA pode
     quebrar l\xE2mpadas e se aproveitar das sombras"
-  Cost: 100
+  Cost: 120
   Type: 1
